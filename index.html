@@ -1,14 +1,163 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethan Salazar | Engineering Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Site Wrapper -->
+  <div class="page">
+
+    <!--========== HEADER / NAV ==========-->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Ethan<span>Salazar</span></div>
+
+        <nav class="nav">
+          <!-- These links can later point to separate pages or sections -->
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--========== HERO ==========-->
+    <main id="home" class="hero">
+      <div class="container hero-inner">
+        <section class="hero-text">
+          <h1>Mechanical Engineering &amp; Embedded Systems</h1>
+          <p>
+            I’m Ethan, a mechanical engineering student focused on
+            manufacturing, sensing, and data-driven design. I’ve built systems
+            ranging from battery test hardware and lake cleanup prototypes to
+            vehicle telemetry platforms.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#experience" class="btn outline">View Experience</a>
+          </div>
+        </section>
+
+        <section class="hero-aside">
+          <!-- Placeholder block for a future photo or collage -->
+          <div class="hero-placeholder">
+            <p>Project image or headshot goes here.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--========== PROJECTS PREVIEW ==========-->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <p class="section-intro">
+          A few of the systems and prototypes I’ve built. Each project page
+          will eventually include detailed writeups, diagrams, data, and code snippets.
+        </p>
+
+        <div class="card-grid">
+          <!-- Project Card 1 -->
+          <article class="card">
+            <h3>Vehicle Telemetry System</h3>
+            <p>
+              Multi-sensor DAQ platform for a kart and vehicle: IMU, GNSS, and
+              temperature probes feeding a Python logging pipeline for vehicle
+              dynamics analysis.
+            </p>
+            <a href="#" class="card-link">Project page (coming soon)</a>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="card">
+            <h3>Lake Cleanup Air Boat</h3>
+            <p>
+              Concept-to-prototype system that removes floating plastics from
+              lakes using structured design methods, stakeholder input, and
+              physical testing.
+            </p>
+            <a href="#" class="card-link">Project page (coming soon)</a>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="card">
+            <h3>Battery Test Chamber</h3>
+            <p>
+              Custom high-temperature chamber for Li-ion packs, integrating
+              heating, insulation, and instrumentation for controlled validation.
+            </p>
+            <a href="#" class="card-link">Project page (coming soon)</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--========== EXPERIENCE PREVIEW ==========-->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-list">
+
+          <article class="experience-item">
+            <h3>Technical Program Intern – Battery Manufacturing</h3>
+            <p class="experience-meta">Fortune 100 EV Manufacturer &middot; Austin, TX</p>
+            <ul>
+              <li>Supported cross-functional manufacturing programs with schedule and readiness tracking.</li>
+              <li>Built lightweight automation in spreadsheets to reduce recurring manual reporting.</li>
+              <li>Coordinated between engineering, operations, and suppliers on build requirements.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <h3>Battery Systems Test Engineer</h3>
+            <p class="experience-meta">PHD Energy &middot; Georgetown, TX</p>
+            <ul>
+              <li>Developed battery test procedures and documentation for custom packs.</li>
+              <li>Designed a high-temperature test chamber and performed terminal temperature analysis.</li>
+              <li>Created process flows and SOPs to standardize small-scale manufacturing.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--========== CONTACT ==========-->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p class="section-intro">
+          I’m open to opportunities in manufacturing, embedded systems,
+          vehicle dynamics, and technical program management.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:youremail@example.com" class="btn primary">Email Me</a>
+          <a href="https://www.linkedin.com" class="btn outline" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com" class="btn outline" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--========== FOOTER ==========-->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Tiny inline script just to auto-set the year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
