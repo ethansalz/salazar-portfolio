@@ -148,6 +148,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Small subtitle under sections */
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-top: 2.25rem;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -221,6 +227,22 @@ body {
   text-decoration: underline;
 }
 
+/* Project tags */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
 /* Experience */
 .experience-list {
   display: grid;
@@ -254,6 +276,55 @@ body {
 
 .experience-item li + li {
   margin-top: 0.25rem;
+}
+
+/* Skills section */
+.skills-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.skills-column h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.skills-column ul {
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.skills-column li + li {
+  margin-top: 0.2rem;
+}
+
+/* About section */
+.about-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.about-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.25rem 1.3rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.02);
+}
+
+.about-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  color: #4b5563;
 }
 
 /* Contact */
@@ -299,48 +370,4 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-}
-/* Small subtitle under sections */
-.section-subtitle {
-  font-size: 1.1rem;
-  margin-top: 2.25rem;
-}
-
-/* Project tags */
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-bottom: 0.25rem;
-}
-
-.tag {
-  font-size: 0.75rem;
-  padding: 0.12rem 0.55rem;
-  border-radius: 999px;
-  background-color: #e5e7eb;
-  color: #374151;
-}
-
-/* Skills section */
-.skills-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.skills-column h3 {
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.skills-column ul {
-  padding-left: 1.1rem;
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-.skills-column li + li {
-  margin-top: 0.2rem;
 }
