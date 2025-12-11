@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Telemetry System | Ethan Salazar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header (same as index) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Ethan<span>Salazar</span></div>
+
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Project hero -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <div>
+          <div class="project-eyebrow">Course Project · Vehicle Telemetry</div>
+          <h1 class="project-title">Vehicle Telemetry System</h1>
+          <p class="project-subtitle">
+            Multi-sensor DAQ platform for a kart and test vehicle that logs IMU, GNSS, and
+            temperature data to CSV for post-processing in Python. Built from scratch, from
+            sensor selection and wiring to logging code and track testing.
+          </p>
+        </div>
+
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Role</span>
+            <span>Hardware design, firmware, Python logging, testing</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Timeline</span>
+            <span>1 semester · ME372C Design for Sensing and Measurements Course</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Key Tools</span>
+            <span>Arduino Nano ESP32, BNO055 IMU, NEO-M8P GNSS, Python, CSV</span>
+          </div>
+        </div>
+
+<div class="project-hero-media project-hero-media-grid">
+  <figure class="project-hero-figure">
+    <img src="img/wiring.png" alt="Telemetry system wiring diagram" />
+  </figure>
+  <figure class="project-hero-figure">
+    <img src="img/system.JPG" alt="Telemetry hardware mounted on kart" />
+  </figure>
+</div>
+
+      </div>
+    </section>
+
+    <!-- Project content -->
+    <main class="project-main">
+      <div class="project-layout">
+
+        <!-- Left column: narrative -->
+        <div>
+
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>
+              Longhorn Racing needed a low-cost way to log vehicle dynamics and thermal data
+              during kart and car testing. Most commercial systems were either too expensive
+              or too closed to modify for student research. Our team built a custom telemetry
+              system that could be moved between vehicles and output structured CSV data for
+              analysis and event classification.
+            </p>
+            <p>
+              The final system combined an IMU, GNSS receiver, and four temperature probes
+              with an Arduino Nano ESP32 and a Python logging pipeline. We validated the
+              system on a kart, logging laps and reconstructing the path, speed profile,
+              and temperature behavior in post-processing.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Hardware Architecture</h2>
+            <p>
+              We iterated through several breadboard prototypes before settling on a clean,
+              compact layout on a long board that could be taped to the kart chassis.
+              The final hardware stack included:
+            </p>
+            <ul>
+              <li>Arduino Nano ESP32 as the main controller and USB interface</li>
+              <li>Adafruit BNO055 9-DoF IMU breakout for orientation and acceleration</li>
+              <li>u-blox NEO-M8P GNSS module with an external antenna for position and speed</li>
+              <li>Four waterproof digital temperature probes for tire and component temperatures</li>
+              <li>Qwiic / I²C cabling to reduce wiring clutter and keep connections robust</li>
+            </ul>
+            <p>
+              Each sensor was selected to balance cost, accuracy, and ease of integration.
+              We tested individual components on an Arduino Uno first, then migrated the
+              design to the Nano ESP32 once we were confident in performance.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Firmware & Data Logging</h2>
+            <p>
+              On the embedded side, I wrote Arduino code to read all sensors at a consistent
+              rate, perform basic unit conversions, and stream a structured line of data over
+              serial. The packet included:
+            </p>
+            <ul>
+              <li>Timestamp, latitude, longitude, and GNSS fix quality</li>
+              <li>IMU orientation and acceleration values</li>
+              <li>Four temperature channels</li>
+            </ul>
+            <p>
+              On the laptop, I wrote a Python script that opened the serial port, parsed
+              the incoming lines, and logged them directly to CSV with appropriate headers.
+              This kept the embedded code simple and made it easy to analyze runs with
+              tools like pandas and matplotlib.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Testing & Results</h2>
+            <p>
+              We first validated the system on the bench, then on a kart at the track.
+              The GNSS data was used to reconstruct clockwise and counterclockwise laps and
+              compare them to ideal circular paths. Temperature data showed clear trends
+              with speed and steering, and IMU data captured transitions and maneuvers.
+            </p>
+            <p>
+              The system met our course requirements and produced clean enough data to
+              support event classification and further model validation work. The full
+              architecture and results are documented in our final report and presentation.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>What I Learned</h2>
+            <ul>
+              <li>How to architect a complete DAQ pipeline from sensor to CSV</li>
+              <li>How to debug noisy sensor data, calibration issues, and wiring problems</li>
+              <li>The value of planning data structures early so analysis is painless later</li>
+              <li>How to design hardware that can survive a real test environment, not just a lab bench</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Right column: sidebar -->
+        <aside>
+          <div class="project-sidebar-card">
+            <h3>System Components</h3>
+            <ul>
+              <li>Arduino Nano ESP32</li>
+              <li>Adafruit BNO055 9-DoF IMU</li>
+              <li>u-blox NEO-M8P GNSS + antenna</li>
+              <li>4× waterproof temperature sensors</li>
+              <li>Qwiic / I²C cabling</li>
+            </ul>
+          </div>
+
+<div class="project-sidebar-card" style="margin-top:1rem;">
+  <h3>Project Links</h3>
+  <ul>
+    <li>
+      <a href="files/telemetry-presentation.pptx"
+         target="_blank"
+         rel="noopener noreferrer"
+         download>
+        Final Presentation (PPTX)
+      </a>
+    </li>
+    <li>
+      <a href="files/telemetry-report.pdf"
+         target="_blank"
+         rel="noopener noreferrer"
+         download>
+        Final Report (PDF)
+      </a>
+    </li>
+    <li>Arduino and Python scripts available on request</li>
+  </ul>
+</div>
+
+        </aside>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

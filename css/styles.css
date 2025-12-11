@@ -144,6 +144,22 @@ body {
   display: flex;
   justify-content: center;
 }
+/* Hero headshot */
+.hero-photo {
+  width: 230px;              /* tweak size if you want bigger/smaller */
+  height: 230px;
+  border-radius: 999px;      /* circle */
+  overflow: hidden;
+  border: 3px solid #e5e7eb;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  background-color: #e5e7eb;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* nice crop */
+}
 
 .hero-placeholder {
   border-radius: 1.25rem;
@@ -230,7 +246,7 @@ body {
   margin-top: 1.4rem;
 }
 
-/* Common card style (works for <a class="card"> or <article class="card">) */
+/* Common card style */
 .card {
   display: block;
   background-color: var(--bg-card);
@@ -367,31 +383,54 @@ body {
   margin-top: 0.2rem;
 }
 
-/* ========== ABOUT ========== */
+/* ========== ABOUT (FULL-WIDTH FEATURE CARDS) ========== */
+
 .about-grid {
-  display: grid;
-  gap: 1.4rem;
-  margin-top: 1.4rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;          /* space between each big card */
+  margin-top: 1.8rem;
 }
 
+/* Each card is a wide, tall split layout */
 .about-card {
   background-color: var(--bg-card);
-  border-radius: 1.05rem;
+  border-radius: 1.1rem;
   border: 1px solid var(--border-subtle);
-  padding: 1.25rem 1.3rem;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.02);
+  padding: 2.1rem 2rem;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+  gap: 1.8rem;
+  align-items: center;
+  min-height: 70vh;     /* tweak this for height; try 90vh for near full screen */
 }
 
-.about-card h3 {
-  font-size: 1.02rem;
+/* Text column */
+.about-content h3 {
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
 }
 
-.about-card p {
-  font-size: 0.9rem;
+.about-content p {
+  font-size: 0.92rem;
   color: #4b5563;
+  margin-bottom: 0.6rem;
+}
+
+/* Image column with ~3 photos */
+.about-media {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.about-media img {
+  width: 100%;
+  height: 240px;
+  border-radius: 0.9rem;
+  object-fit: cover;
 }
 
 /* ========== CONTACT ========== */
@@ -436,5 +475,173 @@ body {
   .nav {
     flex-wrap: wrap;
     gap: 0.6rem;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: 1.6rem 1.4rem;
+    min-height: auto;
+  }
+
+  .about-media img {
+    height: 150px;
+  }
+}
+/* ======= PROJECT PAGES ======= */
+
+.project-hero {
+  padding: 3rem 0 2.5rem;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.project-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.project-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.project-title {
+  font-size: 2.4rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.project-subtitle {
+  color: #4b5563;
+  font-size: 1.05rem;
+  max-width: 42rem;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  font-size: 0.92rem;
+  color: #6b7280;
+}
+
+.project-meta-item span {
+  display: block;
+}
+
+.project-meta-label {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Layout below hero */
+
+.project-main {
+  padding: 2.5rem 0 4.5rem;
+}
+
+.project-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2.5rem;
+}
+
+.project-section + .project-section {
+  margin-top: 2rem;
+}
+
+.project-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-section p,
+.project-section ul {
+  color: #4b5563;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.project-section ul {
+  padding-left: 1.1rem;
+}
+
+.project-section ul li + li {
+  margin-top: 0.35rem;
+}
+
+/* Sidebar */
+
+.project-sidebar-card {
+  background: #f9fafb;
+  border-radius: 1.1rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid #e5e7eb;
+}
+
+.project-sidebar-card h3 {
+  font-size: 1.02rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-sidebar-card ul {
+  padding-left: 1.1rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.project-sidebar-card ul li + li {
+  margin-top: 0.25rem;
+}
+
+/* Project page hero image */
+/* Wrapper for hero media */
+.project-hero-media {
+  margin-top: 1rem;
+}
+
+/* Two-image layout */
+.project-hero-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+/* Each image card */
+.project-hero-figure {
+  margin: 0;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #e5e7eb;
+}
+
+.project-hero-figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Stack on mobile */
+@media (max-width: 900px) {
+  .project-hero-media-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .project-layout {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
