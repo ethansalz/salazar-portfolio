@@ -41,27 +41,28 @@
         <div class="project-meta">
           <div class="project-meta-item">
             <span class="project-meta-label">Role</span>
-            <span>Hardware design, firmware, Python logging, testing</span>
+            <span>Hardware design, firmware, data logging, testing</span>
           </div>
-          <div class="project-meta-item">
+
+          <div class="project-meta-item project-meta-timeline">
             <span class="project-meta-label">Timeline</span>
             <span>1 semester · ME372C Design for Sensing and Measurements Course</span>
           </div>
+
           <div class="project-meta-item">
             <span class="project-meta-label">Key Tools</span>
-            <span>Arduino Nano ESP32, BNO055 IMU, NEO-M8P GNSS, Python, CSV</span>
+            <span>Arduino Nano ESP32, BNO055 IMU, NEO-M8P GNSS, CSV logging</span>
           </div>
         </div>
 
-<div class="project-hero-media project-hero-media-grid">
-  <figure class="project-hero-figure">
-    <img src="img/wiring.png" alt="Telemetry system wiring diagram" />
-  </figure>
-  <figure class="project-hero-figure">
-    <img src="img/system.JPG" alt="Telemetry hardware mounted on kart" />
-  </figure>
-</div>
-
+        <div class="project-hero-media project-hero-media-grid">
+          <figure class="project-hero-figure">
+            <img src="img/wiring.png" alt="Telemetry system wiring diagram" />
+          </figure>
+          <figure class="project-hero-figure">
+            <img src="img/system.JPG" alt="Telemetry hardware mounted on kart" />
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -69,8 +70,72 @@
     <main class="project-main">
       <div class="project-layout">
 
-        <!-- Left column: narrative -->
-        <div>
+        <!-- Sidebar FIRST so float layout works -->
+        <aside>
+          <div class="project-sidebar-card">
+            <h3>System Components</h3>
+            <ul>
+              <li>Arduino Nano ESP32</li>
+              <li>Adafruit BNO055 9-DoF IMU</li>
+              <li>u-blox NEO-M8P GNSS + antenna</li>
+              <li>4× waterproof temperature sensors</li>
+              <li>Qwiic / I²C cabling</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Project Links</h3>
+            <ul>
+              <li>
+                <a href="files/telemetry-presentation.pptx"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Final Presentation (PPTX)
+                </a>
+              </li>
+              <li>
+                <a href="files/telemetry-report.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Final Report (PDF)
+                </a>
+              </li>
+              <li>Arduino and logging scripts available on request</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Data Highlights</h3>
+
+            <figure class="project-plot-thumb">
+              <img src="img/gnss-track.png"
+                   alt="Reconstructed vehicle paths from GNSS data" />
+              <figcaption>
+                Reconstructed vehicle path from GNSS data.
+              </figcaption>
+            </figure>
+
+            <figure class="project-plot-thumb">
+              <img src="img/telemetry-temp.png" alt="Temperature channels over a test run" />
+              <figcaption>Temperature channels over a test run.</figcaption>
+            </figure>
+
+            <figure class="project-plot-thumb">
+              <img src="img/accel.png" alt="IMU acceleration during maneuvers" />
+              <figcaption>Acceleration and deceleration phases during driving.</figcaption>
+            </figure>
+
+            <p class="plot-note">
+              Additional animated results (GPS path reconstruction, IMU behavior) are available
+              in the final presentation above.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Main content column -->
+        <div class="project-main-column">
 
           <section class="project-section">
             <h2>Overview</h2>
@@ -83,13 +148,13 @@
             </p>
             <p>
               The final system combined an IMU, GNSS receiver, and four temperature probes
-              with an Arduino Nano ESP32 and a Python logging pipeline. We validated the
-              system on a kart, logging laps and reconstructing the path, speed profile,
-              and temperature behavior in post-processing.
+              with an Arduino Nano ESP32 and a simple serial-to-CSV logging workflow. We
+              validated the system on a kart, logging laps and reconstructing the path, speed
+              profile, and temperature behavior in post-processing.
             </p>
           </section>
 
-          <section class="project-section">
+         <section class="project-section">
             <h2>Hardware Architecture</h2>
             <p>
               We iterated through several breadboard prototypes before settling on a clean,
@@ -108,30 +173,59 @@
               We tested individual components on an Arduino Uno first, then migrated the
               design to the Nano ESP32 once we were confident in performance.
             </p>
+
+            <figure class="project-plot-thumb project-block-diagram">
+              <img src="img/telemetry-block-diagram.png"
+                   alt="Block diagram of the telemetry system architecture" />
+              <figcaption>
+                High-level architecture from sensors and ESP32 to the logging laptop and analysis tools.
+              </figcaption>
+            </figure>
           </section>
 
           <section class="project-section">
-            <h2>Firmware & Data Logging</h2>
+            <h2>Firmware &amp; Data Logging</h2>
             <p>
               On the embedded side, I wrote Arduino code to read all sensors at a consistent
               rate, perform basic unit conversions, and stream a structured line of data over
               serial. The packet included:
             </p>
             <ul>
-              <li>Timestamp, latitude, longitude, and GNSS fix quality</li>
+              <li>Millisecond timestamp, latitude, longitude, and GNSS fix quality</li>
               <li>IMU orientation and acceleration values</li>
               <li>Four temperature channels</li>
             </ul>
             <p>
-              On the laptop, I wrote a Python script that opened the serial port, parsed
-              the incoming lines, and logged them directly to CSV with appropriate headers.
-              This kept the embedded code simple and made it easy to analyze runs with
-              tools like pandas and matplotlib.
+              On the laptop, I used a simple logger to capture exactly what the board printed
+              to the serial port (the same data visible in the Arduino Serial Plotter) and
+              write it to a fresh CSV file for each run. I manually started and stopped the
+              logger, and used a consistent naming scheme so files could be tied back to
+              specific tests at a glance.
             </p>
           </section>
 
           <section class="project-section">
-            <h2>Testing & Results</h2>
+            <h2>Software Architecture</h2>
+            <p>
+              The software side was intentionally kept simple so anyone on the team could run it
+              without fighting a complex stack. Everything revolved around a single stream of
+              comma-separated values coming off the Nano ESP32:
+            </p>
+            <ul>
+              <li>
+                <strong>Embedded loop:</strong> read all sensors, apply basic unit conversions,
+                and print one CSV line per sample (millisecond timestamp, GNSS, IMU, and four
+                temperature channels) over the serial port.
+              </li>
+              <li>
+                <strong>Serial stream:</strong> the exact same text stream shown in the Arduino
+                Serial Plotter, which made debugging and sanity checks straightforward.
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Testing &amp; Results</h2>
             <p>
               We first validated the system on the bench, then on a kart at the track.
               The GNSS data was used to reconstruct clockwise and counterclockwise laps and
@@ -146,55 +240,39 @@
           </section>
 
           <section class="project-section">
-            <h2>What I Learned</h2>
+            <h2>Problems Solved &amp; What I Learned</h2>
             <ul>
-              <li>How to architect a complete DAQ pipeline from sensor to CSV</li>
-              <li>How to debug noisy sensor data, calibration issues, and wiring problems</li>
-              <li>The value of planning data structures early so analysis is painless later</li>
-              <li>How to design hardware that can survive a real test environment, not just a lab bench</li>
+              <li>
+                Architected a complete DAQ pipeline from sensors through ESP32 to CSV logs
+                that teammates could analyze without touching the firmware.
+              </li>
+              <li>
+                Debugged noisy IMU and GNSS data, calibration drift, and wiring issues by
+                adding warm-up procedures, improving grounding, and cleaning up the layout.
+              </li>
+              <li>
+                Improved logging reliability with a simple, manual logger and a naming
+                convention that made test runs easy to track and compare.
+              </li>
+              <li>
+                Learned how to design hardware that survives vibration, heat, and real track
+                conditions instead of just working once on a lab bench.
+              </li>
             </ul>
           </section>
 
+          <section class="project-section">
+            <h2>Impact</h2>
+            <p>
+              The finished telemetry system gave Longhorn Racing a reusable, low-cost tool
+              for collecting synchronized IMU, GNSS, and thermal data on karts and test
+              vehicles. It has already served as a template for future logging setups and
+              provides a foundation for event classification, driver coaching, and model
+              validation work going forward.
+            </p>
+          </section>
+
         </div>
-
-        <!-- Right column: sidebar -->
-        <aside>
-          <div class="project-sidebar-card">
-            <h3>System Components</h3>
-            <ul>
-              <li>Arduino Nano ESP32</li>
-              <li>Adafruit BNO055 9-DoF IMU</li>
-              <li>u-blox NEO-M8P GNSS + antenna</li>
-              <li>4× waterproof temperature sensors</li>
-              <li>Qwiic / I²C cabling</li>
-            </ul>
-          </div>
-
-<div class="project-sidebar-card" style="margin-top:1rem;">
-  <h3>Project Links</h3>
-  <ul>
-    <li>
-      <a href="files/telemetry-presentation.pptx"
-         target="_blank"
-         rel="noopener noreferrer"
-         download>
-        Final Presentation (PPTX)
-      </a>
-    </li>
-    <li>
-      <a href="files/telemetry-report.pdf"
-         target="_blank"
-         rel="noopener noreferrer"
-         download>
-        Final Report (PDF)
-      </a>
-    </li>
-    <li>Arduino and Python scripts available on request</li>
-  </ul>
-</div>
-
-        </aside>
-
       </div>
     </main>
 

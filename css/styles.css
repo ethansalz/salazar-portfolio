@@ -520,7 +520,6 @@ body {
 .project-subtitle {
   color: #4b5563;
   font-size: 1.05rem;
-  max-width: 42rem;
 }
 
 .project-meta {
@@ -539,8 +538,10 @@ body {
   font-weight: 600;
   color: #4b5563;
 }
+.project-meta-timeline {
+  margin-left: auto;
+}
 
-/* Layout below hero */
 
 .project-main {
   padding: 2.5rem 0 4.5rem;
@@ -549,10 +550,36 @@ body {
 .project-layout {
   max-width: 1100px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 2.5rem;
 }
+
+/* Sidebar floats right; text wraps around it */
+.project-layout aside {
+  float: right;
+  width: 34%;              /* tweak between 30–38% */
+  margin-left: 2rem;
+}
+
+/* Main text column just flows normally */
+.project-main-column {
+  /* no special layout needed */
+}
+
+/* Clear the float after everything */
+.project-layout::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* On mobile, stack */
+@media (max-width: 900px) {
+  .project-layout aside {
+    float: none;
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
 
 .project-section + .project-section {
   margin-top: 2rem;
@@ -577,6 +604,11 @@ body {
 .project-section ul li + li {
   margin-top: 0.35rem;
 }
+/* Make specific sections (like the block diagram) start below the sidebar
+   and use the full width of the content area */
+.project-section-full {
+  clear: both;
+}
 
 /* Sidebar */
 
@@ -600,6 +632,40 @@ body {
 
 .project-sidebar-card ul li + li {
   margin-top: 0.25rem;
+}
+.project-plot-thumb {
+  margin: 0 0 0.9rem 0;
+}
+
+.project-plot-thumb img {
+  width: 100%;
+  max-height: 300px;     /* tweak 160–220px to taste */
+  border-radius: 0.8rem;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+}
+.plot-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.project-plot-thumb figcaption {
+  margin-top: 0.25rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+/* Keep the block diagram closer to the left-column width */
+.project-block-diagram {
+  max-width: 60%;     /* tweak between ~60–70% to taste */
+}
+
+/* (optional) make sure it hugs the left, not centered */
+.project-block-diagram {
+  margin-right: auto;
 }
 
 /* Project page hero image */
@@ -634,14 +700,6 @@ body {
 /* Stack on mobile */
 @media (max-width: 900px) {
   .project-hero-media-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-/* Responsive */
-
-@media (max-width: 900px) {
-  .project-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 }
