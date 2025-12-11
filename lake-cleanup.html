@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lake Guardians Airboat System | Ethan Salazar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header (same as index) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Ethan<span>Salazar</span></div>
+
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Project hero -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <div>
+          <div class="project-eyebrow">Two-Semester Course Project · Lake Cleanup</div>
+          <h1 class="project-title">Air Boat for Lake Cleanup</h1>
+          <p class="project-subtitle">
+            Remotely operated airboat with a front-mounted comb system designed to relocate
+            floating plastics out of brush-filled shorelines on Lady Bird Lake and Lake Austin.
+            Built using full engineering design methodology: stakeholder interviews, function
+            trees, morphological matrices, Pugh charts, FMEA, DFMA, CAD, and physical
+            prototypes.
+          </p>
+        </div>
+
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Role</span>
+            <span>
+              Design methodology, systems arch, DFMA analysis, prototyping,
+              documentation
+            </span>
+          </div>
+
+          <div class="project-meta-item project-meta-timeline">
+            <span class="project-meta-label">Timeline</span>
+            <span>2 semesters · ME 366J Engineering Design Methodology (ongoing)</span>
+          </div>
+
+          <div class="project-meta-item">
+            <span class="project-meta-label">Key Tools</span>
+            <span>
+              Stakeholder interviews, House of Quality, FMEA, DFMA, CAD, low-fidelity prototyping
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero media: swap these placeholder images later -->
+        <div class="project-hero-media project-hero-media-grid">
+          <figure class="project-hero-figure">
+            <img src="img/lake-guardians-hero-lake.jpg"
+                 alt="Plastic debris along a vegetated shoreline on Lady Bird Lake" />
+          </figure>
+          <figure class="project-hero-figure">
+            <img src="img/lake-cad.png"
+                 alt="CAD rendering of the airboat cleanup concept" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project content -->
+    <main class="project-main">
+      <div class="project-layout">
+
+        <!-- Sidebar FIRST so float layout works -->
+        <aside>
+          <div class="project-sidebar-card">
+            <h3>System Concept</h3>
+            <ul>
+              <li>RC airboat with above-water fan and rudders</li>
+              <li>Front comb “bulldozer” to push debris through brush</li>
+              <li>Modular electronics pod with waterproof enclosure</li>
+              <li>Foam hull sized for 2 ft × 1 ft footprint</li>
+              <li>Designed for shallow, vegetation-dense shorelines</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Project Links</h3>
+            <ul>
+              <li>
+                <a href="files/CDR Report.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Comprehensive Design Review (PDF)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Design Artifacts</h3>
+
+            <figure class="project-plot-thumb">
+              <img src="img/function-tree.png"
+                   alt="Function tree for removing plastics from lakes" />
+              <figcaption>Function tree decomposing “Remove plastic from lakes.”</figcaption>
+            </figure>
+
+            <figure class="project-plot-thumb">
+              <img src="img/morph-matrix.png"
+                   alt="Morphological matrix listing subfunctions and mechanisms" />
+              <figcaption>Morphological matrix used to generate concept variants.</figcaption>
+            </figure>
+
+            <figure class="project-plot-thumb">
+              <img src="img/pugh-chart.png"
+                   alt="Pugh chart comparing airboat to other cleanup concepts" />
+              <figcaption>Rotating-datum Pugh charts that elevated the airboat concept.</figcaption>
+            </figure>
+
+            <p class="plot-note">
+              Additional CAD drawings, FMEA tables, DFMA notes, and test photos are available
+              in the linked report.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Main content column -->
+        <div class="project-main-column">
+
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>
+              Central Texas lakes are collecting plastic litter and tire-wear particles, especially
+              along brush-filled shorelines where existing cleanup boats can’t maneuver safely.
+              Our Lake Guardians team set out to design a small, deployable system that can reach
+              those pockets, corral floating plastics, and hand debris off to existing crews instead
+              of replacing them.
+            </p>
+            <p>
+              Over two semesters, we’ve treated this as a full design-methodology case study:
+              interviewing stakeholders from the City of Austin and UT research groups, translating
+              quotes into customer needs, building engineering specifications and a House of
+              Quality, then using structured concept generation and selection to arrive at a
+              remotely operated airboat with a front comb bulldozer mechanism.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Design Methodology</h2>
+            <p>
+              This project is less about a single cool prototype and more about doing the design
+              process correctly end-to-end. We:
+            </p>
+            <ul>
+              <li>
+                Conducted solution-neutral interviews and field observations, then converted
+                raw quotes into interpreted needs, engineering requirements, and ranked
+                specifications
+              </li>
+              <li>
+                Built a <strong>House of Quality</strong> that benchmarked Mr. Trash Wheel, StormX
+                Netting Trap, and Seabin, then used that to set target metrics for capture
+                performance, ecological safety, and ease of maintenance
+              </li>
+              <li>
+                Used <strong>function decomposition</strong> to break “remove plastics from lakes” into
+                eight primary functions like intercepting floating plastics, protecting wildlife,
+                retaining debris, enabling modular deployment, and informing the public
+              </li>
+              <li>
+                Ran multiple ideation methods (6-3-5 brainwriting, design-by-analogy,
+                SCAMPER) and captured those ideas in a morphological matrix and five fully
+                defined concept variants
+              </li>
+              <li>
+                Evaluated concepts with rotating-datum <strong>Pugh charts</strong>, backed by
+                quick “back-of-the-envelope” calculations for throughput, capacity, cost, and
+                maintenability
+              </li>
+            </ul>
+            <p>
+              The outcome of all that structure was a clear, defensible choice: an airboat
+              concept that balanced plastic removal, wildlife safety, cost, and maintainability
+              better than drones, floating channels, or hand tools.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Leading Concept: Airboat Cleanup System</h2>
+            <p>
+              The final concept is a small airboat that pushes trash instead of sucking water:
+            </p>
+            <ul>
+              <li>
+                <strong>Above-water propulsion:</strong> a rear fan and rudder system mounted entirely
+                above the waterline to avoid vegetation jams and protect wildlife
+              </li>
+              <li>
+                <strong>Front comb bulldozer:</strong> a wide rake that funnels floating plastics out of
+                brushy shorelines into access zones where crews can collect them
+              </li>
+              <li>
+                <strong>Modular hull:</strong> stacked XPS foam panels with an epoxy skin, sized for a
+                2 ft × 1 ft footprint so the boat is stable, portable, and cheap to build
+              </li>
+              <li>
+                <strong>Swap-in modules:</strong> a removable comb assembly, electronics pod, and
+                propulsion module so parts can be upgraded or replaced without rebuilding the
+                hull
+              </li>
+            </ul>
+
+            <figure class="project-plot-thumb--tall">
+              <img src="img/exploded-airboat.png"
+                   alt="Final CAD rendering of the airboat with comb, fan, and hull" />
+              <figcaption>
+                Exploded CAD layout showing above-water propulsion, modular electronics pod,
+                and front comb assembly.
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="project-section">
+  <h2>Prototyping &amp; Risk Reduction</h2>
+  <p>
+    Before spending real money on electronics, we built low-fidelity prototypes for the
+    two riskiest subsystems: the comb and the hull.
+  </p>
+  <ul>
+    <li>
+      <strong>Comb prototype:</strong> PVC frame and paint-stick “teeth” tested in brushy,
+      lake-like conditions with bottles and wrappers. This validated the geometry for
+      pushing debris through vegetation and exposed obvious failure modes like tooth
+      breakage and weak attachments
+    </li>
+    <li>
+      <strong>Foam hull PoC:</strong> a bathtub-tested insulation-foam hull with a toy fan
+      to confirm buoyancy, stability, and deck geometry before committing to a full
+      epoxy-coated build
+    </li>
+    <li>
+      <strong>FMEA:</strong> quantified risk around vegetation jams, electronics flooding,
+      and RC signal loss, then drove concrete mitigations like a wiper system on the comb,
+      sealed electronics enclosures, and antenna placement changes
+    </li>
+  </ul>
+
+  <div class="project-plot-row">
+    <figure class="project-plot-thumb--tall">
+      <img src="img/comb-prototype.jpg"
+           alt="Comb prototype used to test geometry and jamming risk." />
+      <figcaption>Comb prototype used to test geometry and jamming risk.</figcaption>
+    </figure>
+
+    <figure class="project-plot-thumb--tall">
+      <img src="img/hull-prototype.jpg"
+           alt="Foam hull proof-of-concept verifying buoyancy and stability." />
+      <figcaption>Foam hull proof-of-concept verifying buoyancy and stability.</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+          <section class="project-section">
+            <h2>Design for Manufacturing &amp; Assembly</h2>
+            <p>
+              A big chunk of this project was learning to design for the shop we actually have,
+              not the shop we wish we had. I leaned heavily on DFMA heuristics while revising
+              the CAD:
+            </p>
+            <ul>
+              <li>
+                <strong>Manufacturing:</strong> re-designed the hull around flat XPS sheets and simple
+                2D cuts; converted the comb from many unique tines into a small set of repeated
+                laser-cut panels; and selected common materials (foam, plywood, PVC,
+                aluminum) that can be manufactured in student shops
+              </li>
+              <li>
+                <strong>Assembly:</strong> reduced part count, consolidated bolt sizes, and added
+                self-locating features and press-fit interfaces so the boat can be assembled
+                top-down with simple hand tools
+              </li>
+              <li>
+                <strong>Documentation:</strong> created detailed assembly drawings, an assembly plan,
+                and a BOM that someone else could realistically follow without our whole
+                report as a crutch
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Responsibilities &amp; What I Learned</h2>
+            <p>
+              This project forced me to live inside a structured
+              design process for months and keep the team moving. Key things I owned and
+              learned:
+            </p>
+            <ul>
+              <li>
+                <strong>Design process discipline:</strong> keeping our work traceable from customer
+                quotes → interpreted needs → engineering specs → design artifacts (function
+                tree, HoQ, morph matrix, Pugh charts) → final concept
+              </li>
+              <li>
+                <strong>Risk-aware design:</strong> using FMEA as a real design tool instead of a
+                checkbox, then folding those risks back into geometry changes, enclosure
+                decisions, and control-system failsafes
+              </li>
+              <li>
+                <strong>DFMA mindset:</strong> learning to simplify geometry, standardize parts, and
+                design fasteners and interfaces so that volunteers—not just engineers—can
+                assemble and maintain the system
+              </li>
+              <li>
+                <strong>Project planning:</strong> maintaining the Gantt chart and task list, breaking
+                ambiguous deliverables into concrete tasks, and making sure our design work
+                aligned with the course milestones and the two-semester roadmap
+              </li>
+              <li>
+                <strong>Communicating decisions:</strong> packaging all of this into clear reports and
+                presentations so faculty, stakeholders, and future teams can understand why we
+                chose an airboat, how it meets specs, and where to iterate next
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Impact &amp; Next Steps</h2>
+            <p>
+              By the end of the CDR, we have more than just a sketch: we have a justified, manufacturable
+              airboat concept with drawings, risk mitigations, and a build plan. Next semester
+              we’ll fabricate a medium-fidelity prototype, validate thrust and steering on the water,
+              stress-test the comb in real vegetation, and close the loop with the researchers and
+              city partners who helped shape the specs.
+            </p>
+            <p>
+              This project is the bridge between classroom design tools and the messy,
+              constrained reality of environmental hardware: taking a vague goal like “clean the
+              lake,” grinding it through formal design methodology, and ending up with something
+              real that crews can deploy.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

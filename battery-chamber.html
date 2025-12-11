@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High Temperature Battery Test Chamber | Ethan Salazar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header (same as index) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Ethan<span>Salazar</span></div>
+
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Project hero -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <div>
+          <div class="project-eyebrow">Internship Project · PHD Energy</div>
+          <h1 class="project-title">High Temperature Battery Test Chamber</h1>
+          <p class="project-subtitle">
+            Improvised high-temperature chamber built from an empty pack enclosure, a heating
+            pad, insulation, and bench-top equipment to soak lithium iron phosphate packs at
+            45–65&nbsp;°C. Replaced the need for a multi-thousand-dollar environmental chamber
+            and unlocked a new level of validation for PHD Energy cells.
+          </p>
+        </div>
+
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Role</span>
+            <span>
+              Concept, chamber design, build, instrumentation, test planning, analysis, reporting
+            </span>
+          </div>
+
+          <div class="project-meta-item project-meta-timeline">
+            <span class="project-meta-label">Timeline</span>
+            <span>Summer 2024 · PHD Energy Internship</span>
+          </div>
+
+          <div class="project-meta-item">
+            <span class="project-meta-label">Key Tools</span>
+            <span>
+              LiFePO₄ pack enclosure, silicone heating pad, foam insulation, thermistor,
+              12&nbsp;V fans, DC bench supply, clamp meter, Excel, client-facing reports
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero media (placeholders – swap for your real images) -->
+        <div class="project-hero-media project-hero-media-grid">
+          <figure class="project-hero-figure">
+            <img src="img/chamber-hero-closed.jpg"
+                 alt="Improvised high temperature chamber built from a large LiFePO4 pack enclosure" />
+          </figure>
+          <figure class="project-hero-figure">
+            <img src="img/chamber-hero-open.jpg"
+                 alt="Interior of the battery test chamber showing insulation, heating pad, and thermistor lead" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project content -->
+    <main class="project-main">
+      <div class="project-layout">
+
+        <!-- Sidebar FIRST so float layout works -->
+        <aside>
+          <div class="project-sidebar-card">
+            <h3>Chamber Build</h3>
+            <ul>
+              <li>Reused 25.6&nbsp;V 150&nbsp;Ah LiFePO₄ pack enclosure as the chamber shell</li>
+              <li>Silicone heating pad bonded to the steel base plate</li>
+              <li>Foam inserts and reflective liner for thermal insulation</li>
+              <li>Two small 12&nbsp;V DC fans mounted in the lid for air circulation</li>
+              <li>NTC thermistor routed inside for chamber temperature feedback</li>
+              <li>Bench-top DC power supply and clamp meter for power control</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Project Links</h3>
+            <ul>
+              <li>
+                <a href="files/high-temp-chamber-analysis.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  High Terminal Temperature Analysis (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="files/high-temp-chamber-procedure.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Test Procedure &amp; Chamber Setup (PDF)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Data Highlights</h3>
+
+            <figure class="project-plot-thumb">
+              <img src="img/chamber-graph-discharge.png"
+                   alt="Example discharge test showing chamber and terminal temperature vs time" />
+              <figcaption>
+                Representative discharge test at 45&nbsp;°C ambient: chamber vs terminal temperature.
+              </figcaption>
+            </figure>
+
+            <figure class="project-plot-thumb">
+              <img src="img/chamber-graph-compare.png"
+                   alt="Terminal temperature comparison for alligator clips vs screwed leads" />
+              <figcaption>
+                Terminal temperatures for alligator clips vs screwed leads across several tests.
+              </figcaption>
+            </figure>
+
+            <p class="plot-note">
+              Full datasets and graphs were compiled into customer-facing reports for Locus
+              Robotics and internal design reviews.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Main content column -->
+        <div class="project-main-column">
+
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>
+              PHD Energy needed to understand why some customer packs were seeing elevated
+              terminal temperatures in the field. The obvious solution was to buy a professional
+              environmental chamber, but that would have cost several thousand dollars and
+              taken weeks to procure. Instead, I was asked to “see what we could do” with what
+              we already had on hand.
+            </p>
+            <p>
+              I designed and built a high-temperature battery testing chamber from an empty
+              LiFePO₄ pack enclosure, a heating pad, foam insulation, and bench-top equipment.
+              The chamber can soak packs at controlled ambient temperatures of 45&nbsp;°C and
+              65&nbsp;°C, enabling repeatable charge/discharge tests that mirror worst-case field
+              conditions while staying within a startup budget.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Chamber Architecture</h2>
+            <p>
+              The core design challenge was creating a safe, uniform, and controllable thermal
+              environment inside a plastic battery enclosure not originally designed as a chamber.
+            </p>
+            <ul>
+              <li>
+                <strong>Enclosure:</strong> repurposed a large 25.6&nbsp;V 150&nbsp;Ah LiFePO₄ pack
+                housing as the outer shell, giving us built-in terminals, handles, and enough
+                volume for a module under test.
+              </li>
+              <li>
+                <strong>Heating system:</strong> mounted a silicone heating pad on the steel base
+                plate and routed its leads out through an existing strain-relief, avoiding any new
+                penetrations that could compromise safety.
+              </li>
+              <li>
+                <strong>Insulation:</strong> added foam blocks and an interior liner to minimize heat
+                loss and keep the plastic walls below damaging temperatures.
+              </li>
+              <li>
+                <strong>Air circulation:</strong> attached two 12&nbsp;V DC fans to the inside of the lid
+                to circulate air and reduce hot spots near the heater.
+              </li>
+              <li>
+                <strong>Instrumentation:</strong> ran a thermistor lead into the chamber, taped to the
+                interior wall near the pack terminals so readings reflected the actual environment.
+              </li>
+            </ul>
+
+            <figure class="project-plot-thumb">
+              <img src="img/chamber-internal-layout.jpg"
+                   alt="Interior layout showing heating pad, foam insulation, and thermistor routing" />
+              <figcaption>
+                Internal layout of the improvised chamber: heating pad on the base, foam inserts,
+                and thermistor routed to the terminal region.
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="project-section">
+            <h2>Control &amp; Measurement Setup</h2>
+            <p>
+              Rather than building a full PID controller, I leaned on existing lab equipment and
+              simple procedures that technicians could repeat:
+            </p>
+            <ul>
+              <li>
+                Powered the heating pad from a bench DC supply, using voltage and current
+                limits to cap heater power and avoid runaway.
+              </li>
+              <li>
+                Used a clamp meter and multimeter to monitor heater draw and pack current
+                during tests, verifying that our 30&nbsp;A charge/discharge condition was met.
+              </li>
+              <li>
+                Logged ambient chamber temperature via the thermistor and pack terminal
+                temperatures at fixed time intervals into an Excel sheet.
+              </li>
+              <li>
+                Developed a warm-up procedure: soak packs at 45&nbsp;°C for 3–4&nbsp;hours
+                before starting charge/discharge cycles to ensure repeatable initial conditions.
+              </li>
+            </ul>
+            <p>
+              This “use what’s on the bench” approach kept cost close to zero while still giving
+              us professional-grade control over the test environment.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Validation Campaign</h2>
+            <p>
+              With the chamber built, I designed a test plan to isolate the root cause of high
+              terminal temperatures on a 12&nbsp;V LFP pack used by a robotics customer. The
+              main variables were ambient temperature, connection method, and wire gauge.
+            </p>
+            <ul>
+              <li>
+                Soaked packs at 45&nbsp;°C ambient and ran multiple charge/discharge tests at
+                30&nbsp;A, using both alligator clips and screwed-in leads with different wire
+                gauges.
+              </li>
+              <li>
+                Logged chamber and terminal temperatures over time and exported datasets
+                into Excel for plotting and comparison.
+              </li>
+              <li>
+                Generated graphs comparing alligator clips vs 8&nbsp;AWG and 10&nbsp;AWG
+                screwed leads for both charging and discharging, then summarized the
+                trends and max temperatures in a client-facing report.
+              </li>
+            </ul>
+            <p>
+              The data showed that poor connections (alligator clips) caused significantly higher
+              terminal temperatures than properly screwed-in leads, and that thicker wire helped
+              but connection quality mattered most.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Problems Solved &amp; What I Learned</h2>
+            <ul>
+              <li>
+                <strong>Built a test chamber from scratch:</strong> turned spare parts—an empty
+                enclosure, heater, foam, fans, and a bench supply—into a safe, repeatable
+                high-temperature chamber without buying new capital equipment.
+              </li>
+              <li>
+                <strong>Owned the whole pipeline:</strong> design, build, test planning, execution,
+                data collection, and analysis all ran through me, which forced me to think
+                about safety, repeatability, and usability at every step.
+              </li>
+              <li>
+                <strong>Developed reporting muscle:</strong> translated raw spreadsheets into a clear
+                narrative report that explained the setup, showed the key graphs, and made
+                concrete recommendations on connection hardware and wire gauge.
+              </li>
+              <li>
+                <strong>Learned to design within constraints:</strong> instead of specifying “ideal”
+                equipment, I had to design a workflow that fit PHD’s existing lab, power
+                availability, and budget.
+              </li>
+              <li>
+                <strong>Improved test discipline:</strong> built habits around pre-conditioning packs,
+                documenting every configuration, and keeping enough detail that someone
+                else can repeat the campaign months later.
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Impact</h2>
+            <p>
+              The improvised chamber eliminated the need to purchase a multi-thousand-dollar
+              environmental chamber while still meeting our customer’s requirement to validate
+              performance at elevated ambient temperatures. It enabled PHD Energy to run
+              structured high-temperature tests on production packs, generate confident
+              recommendations on connection hardware, and demonstrate that the root cause
+              of high terminal temperatures was connection quality—not the cell design itself.
+            </p>
+            <p>
+              Just as importantly, the chamber is now a permanent tool in the lab. Future
+              engineers can drop new packs in, follow the documented procedure, and extend
+              validation to new products without additional capital spend.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

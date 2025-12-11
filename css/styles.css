@@ -637,6 +637,24 @@ body {
   margin: 0 0 0.9rem 0;
 }
 
+.project-plot-thumb--tall img {
+  max-height: 500px;
+}
+/* Two-up image row for large prototypes below the sidebar */
+.project-plot-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+/* Stack on small screens */
+@media (max-width: 768px) {
+  .project-plot-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .project-plot-thumb img {
   width: 100%;
   max-height: 300px;     /* tweak 160–220px to taste */
