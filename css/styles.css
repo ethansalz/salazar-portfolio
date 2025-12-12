@@ -640,6 +640,11 @@ body {
 .project-plot-thumb--tall img {
   max-height: 500px;
 }
+
+.project-plot-thumb--tall-2 img {
+  max-width: 675px;
+}
+
 /* Two-up image row for large prototypes below the sidebar */
 .project-plot-row {
   display: grid;

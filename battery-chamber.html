@@ -64,11 +64,11 @@
         <!-- Hero media (placeholders – swap for your real images) -->
         <div class="project-hero-media project-hero-media-grid">
           <figure class="project-hero-figure">
-            <img src="img/chamber-hero-closed.jpg"
+            <img src="img/battery-main.JPG"
                  alt="Improvised high temperature chamber built from a large LiFePO4 pack enclosure" />
           </figure>
           <figure class="project-hero-figure">
-            <img src="img/chamber-hero-open.jpg"
+            <img src="img/battery-3.JPG"
                  alt="Interior of the battery test chamber showing insulation, heating pad, and thermistor lead" />
           </figure>
         </div>
@@ -97,19 +97,11 @@
             <h3>Project Links</h3>
             <ul>
               <li>
-                <a href="files/high-temp-chamber-analysis.pdf"
+                <a href="files/Locus Robotics – High Terminal Temperatures Analysis 20240805.pdf"
                    target="_blank"
                    rel="noopener noreferrer"
                    download>
                   High Terminal Temperature Analysis (PDF)
-                </a>
-              </li>
-              <li>
-                <a href="files/high-temp-chamber-procedure.pdf"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   download>
-                  Test Procedure &amp; Chamber Setup (PDF)
                 </a>
               </li>
             </ul>
@@ -119,25 +111,20 @@
             <h3>Data Highlights</h3>
 
             <figure class="project-plot-thumb">
-              <img src="img/chamber-graph-discharge.png"
+              <img src="img/graph-charge.png"
                    alt="Example discharge test showing chamber and terminal temperature vs time" />
               <figcaption>
-                Representative discharge test at 45&nbsp;°C ambient: chamber vs terminal temperature.
+                Representative charge test at 45&nbsp;°C ambient: terminal temperatures for different AWG.
               </figcaption>
             </figure>
 
             <figure class="project-plot-thumb">
-              <img src="img/chamber-graph-compare.png"
+              <img src="img/graph-compare.png"
                    alt="Terminal temperature comparison for alligator clips vs screwed leads" />
               <figcaption>
-                Terminal temperatures for alligator clips vs screwed leads across several tests.
+                Terminal temperatures for alligator clips vs screwed leads across different AWG.
               </figcaption>
             </figure>
-
-            <p class="plot-note">
-              Full datasets and graphs were compiled into customer-facing reports for Locus
-              Robotics and internal design reviews.
-            </p>
           </div>
         </aside>
 
@@ -172,29 +159,29 @@
               <li>
                 <strong>Enclosure:</strong> repurposed a large 25.6&nbsp;V 150&nbsp;Ah LiFePO₄ pack
                 housing as the outer shell, giving us built-in terminals, handles, and enough
-                volume for a module under test.
+                volume for a module under test
               </li>
               <li>
                 <strong>Heating system:</strong> mounted a silicone heating pad on the steel base
                 plate and routed its leads out through an existing strain-relief, avoiding any new
-                penetrations that could compromise safety.
+                penetrations that could compromise safety
               </li>
               <li>
                 <strong>Insulation:</strong> added foam blocks and an interior liner to minimize heat
-                loss and keep the plastic walls below damaging temperatures.
+                loss and keep the plastic walls below damaging temperatures
               </li>
               <li>
                 <strong>Air circulation:</strong> attached two 12&nbsp;V DC fans to the inside of the lid
-                to circulate air and reduce hot spots near the heater.
+                to circulate air and reduce hot spots near the heater
               </li>
               <li>
                 <strong>Instrumentation:</strong> ran a thermistor lead into the chamber, taped to the
-                interior wall near the pack terminals so readings reflected the actual environment.
+                interior wall near the pack terminals so readings reflected the actual environment
               </li>
             </ul>
 
-            <figure class="project-plot-thumb">
-              <img src="img/chamber-internal-layout.jpg"
+            <figure class="project-plot-thumb--tall-2">
+              <img src="img/battery-2.JPG"
                    alt="Interior layout showing heating pad, foam insulation, and thermistor routing" />
               <figcaption>
                 Internal layout of the improvised chamber: heating pad on the base, foam inserts,
@@ -234,7 +221,7 @@
           </section>
 
           <section class="project-section">
-            <h2>Validation Campaign</h2>
+            <h2>Validation</h2>
             <p>
               With the chamber built, I designed a test plan to isolate the root cause of high
               terminal temperatures on a 12&nbsp;V LFP pack used by a robotics customer. The
@@ -244,22 +231,22 @@
               <li>
                 Soaked packs at 45&nbsp;°C ambient and ran multiple charge/discharge tests at
                 30&nbsp;A, using both alligator clips and screwed-in leads with different wire
-                gauges.
+                gauges
               </li>
               <li>
                 Logged chamber and terminal temperatures over time and exported datasets
-                into Excel for plotting and comparison.
+                into Excel for plotting and comparison
               </li>
               <li>
                 Generated graphs comparing alligator clips vs 8&nbsp;AWG and 10&nbsp;AWG
                 screwed leads for both charging and discharging, then summarized the
-                trends and max temperatures in a client-facing report.
+                trends and max temperatures in a client-facing report
               </li>
             </ul>
             <p>
               The data showed that poor connections (alligator clips) caused significantly higher
               terminal temperatures than properly screwed-in leads, and that thicker wire helped
-              but connection quality mattered most.
+              but connection quality mattered most
             </p>
           </section>
 
@@ -269,27 +256,27 @@
               <li>
                 <strong>Built a test chamber from scratch:</strong> turned spare parts—an empty
                 enclosure, heater, foam, fans, and a bench supply—into a safe, repeatable
-                high-temperature chamber without buying new capital equipment.
+                high-temperature chamber without buying new capital equipment
               </li>
               <li>
                 <strong>Owned the whole pipeline:</strong> design, build, test planning, execution,
                 data collection, and analysis all ran through me, which forced me to think
-                about safety, repeatability, and usability at every step.
+                about safety, repeatability, and usability at every step
               </li>
               <li>
                 <strong>Developed reporting muscle:</strong> translated raw spreadsheets into a clear
                 narrative report that explained the setup, showed the key graphs, and made
-                concrete recommendations on connection hardware and wire gauge.
+                concrete recommendations on connection hardware and wire gauge
               </li>
               <li>
                 <strong>Learned to design within constraints:</strong> instead of specifying “ideal”
                 equipment, I had to design a workflow that fit PHD’s existing lab, power
-                availability, and budget.
+                availability, and budget
               </li>
               <li>
                 <strong>Improved test discipline:</strong> built habits around pre-conditioning packs,
                 documenting every configuration, and keeping enough detail that someone
-                else can repeat the campaign months later.
+                else can repeat the campaign months later
               </li>
             </ul>
           </section>
