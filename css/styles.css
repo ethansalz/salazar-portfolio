@@ -261,7 +261,7 @@ body {
 }
 
 .card:hover {
-  border-color: 1px solid #e5e7eb; /* burnt orange edge */
+  border-color: 1px solid #0b0b0b; /* burnt orange edge */
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
 }
