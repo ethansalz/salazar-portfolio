@@ -272,6 +272,19 @@ body {
   margin-bottom: 0.45rem;
 }
 
+.card-cta{
+  margin-top: 0.9rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;          /* neutral */
+  opacity: 0.85;
+}
+
+/* optional: make it pop a bit on hover */
+.card:hover .card-cta{
+  opacity: 1;
+}
+
 .card p {
   color: var(--text-muted);
   font-size: 0.9rem;
