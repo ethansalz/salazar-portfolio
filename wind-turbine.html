@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wind Turbine with AC-to-DC Power Conversion | Ethan Salazar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header (same as index) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Ethan<span>Salazar</span></div>
+
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Project hero -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <div>
+          <div class="project-eyebrow">Course Project · ME 140L Mechatronics Lab</div>
+          <h1 class="project-title">Wind Turbine with AC-to-DC Power Conversion</h1>
+          <p class="project-subtitle">
+            Bench-scale wind turbine system that converts mechanical energy into usable DC power and provides
+            clear speed feedback through a custom rectifier and comparator-based indicator circuit
+            Designed, built, debugged, and validated across multiple wind speeds using structured lab testing
+          </p>
+        </div>
+
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Role</span>
+            <span>Electrical build, circuit debugging, test execution, measurement, documentation</span>
+          </div>
+
+          <div class="project-meta-item project-meta-timeline">
+            <span class="project-meta-label">Timeline</span>
+            <span>1 month lab project · ME 140L Mechatronics Laboratory</span>
+          </div>
+
+          <div class="project-meta-item">
+            <span class="project-meta-label">Key Tools</span>
+            <span>Oscilloscope, bench supply, multimeter, breadboard circuits, rectifier + filtering, comparator thresholds</span>
+          </div>
+        </div>
+
+        <!-- Hero media -->
+        <div class="project-hero-media project-hero-media-grid">
+          <figure class="project-hero-figure">
+            <img src="img/windmill-hero-1.jpg" alt="Windmill generator setup on the lab bench" />
+          </figure>
+          <figure class="project-hero-figure">
+            <img src="img/windmill-hero-2.jpg" alt="Breadboarded rectifier and indicator circuit during testing" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project content -->
+    <main class="project-main">
+      <div class="project-layout">
+
+        <!-- Sidebar FIRST so float layout works -->
+        <aside>
+          <div class="project-sidebar-card">
+            <h3>System Overview</h3>
+            <ul>
+              <li>Wind-driven generator used as the mechanical to electrical energy source</li>
+              <li>Full-wave rectifier and filtering to produce a usable DC output</li>
+              <li>Comparator thresholds to classify operating speed states</li>
+              <li>LED indicators to communicate turbine speed behavior in real time</li>
+              <li>Validated at multiple wind speeds with scope and meter measurements</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Project Links</h3>
+            <ul>
+              <li>
+                <a href="files/Final Presentation.pdf" target="_blank" rel="noopener noreferrer" download>
+                  Final Presentation (PDF)
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Main content column -->
+        <div class="project-main-column">
+
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>
+              This project combined mechanical energy conversion, analog electronics, and experimental validation
+              into a single working system. The windmill drives a generator that produces an AC output, which then
+              gets converted and conditioned into a usable DC signal. That signal is used to drive an indicator circuit
+              that communicates turbine speed behavior during live operation.
+            </p>
+            <p>
+              The focus was not just building a circuit, but proving it with measurements. We tested the system across
+              multiple wind speeds, verified rectified output behavior, and tuned thresholds so the indicator logic
+              stayed stable under real, noisy generator conditions.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>System Architecture</h2>
+            <p>
+              The system is built around a simple pipeline from physical behavior to user feedback:
+            </p>
+            <ul>
+              <li>Wind input spins the rotor and drives the generator</li>
+              <li>Generator AC output feeds a full-wave rectifier stage</li>
+              <li>Filtering reduces ripple and stabilizes the DC signal</li>
+              <li>Comparator logic detects voltage thresholds tied to speed states</li>
+              <li>LED outputs provide immediate speed feedback without needing instruments</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Power Conditioning</h2>
+            <p>
+              The generator output varies significantly with turbine speed, so the first task was making that signal usable.
+              The conditioning stage converts AC to DC and reduces ripple so downstream logic behaves consistently.
+            </p>
+            <ul>
+              <li>Designed a full-wave rectifier to convert generator output into DC</li>
+              <li>Added filtering to improve stability and reduce flicker in the indicators</li>
+              <li>Validated DC behavior by measuring ripple and steady-state output under load</li>
+            </ul>
+
+            <figure class="project-figure">
+              <img src="img/windmill-setup.png" alt="Breadboarded rectifier and filtering stage" />
+              <figcaption>Full system schematic showing full-bridge rectifier, logic controller, and indicator systems</figcaption>
+            </figure>
+          </section>
+
+          <section class="project-section">
+            <h2>Indicator Logic</h2>
+            <p>
+              The indicator circuit converts DC voltage into clear discrete states that reflect turbine operating speed.
+              Comparator thresholds were tuned based on measured generator behavior rather than ideal assumptions.
+            </p>
+            <ul>
+              <li>Set comparator thresholds to classify low, nominal, and high speed operation</li>
+              <li>Used LED indicators to communicate state transitions cleanly during operation</li>
+              <li>Adjusted threshold margins to avoid chatter during noisy transitions</li>
+            </ul>
+
+          </section>
+
+          <section class="project-section">
+            <h2>Testing & Validation</h2>
+            <p>
+              Performance was verified experimentally across multiple wind speeds with direct measurements on both the raw AC signal
+              and the conditioned DC output.
+            </p>
+            <ul>
+              <li>Measured generator output with oscilloscope to confirm expected waveform behavior</li>
+              <li>Verified rectified DC output magnitude and ripple across operating conditions</li>
+              <li>Confirmed indicator state changes at intended thresholds during live testing</li>
+            </ul>
+
+            <div class="project-hero-media project-hero-media-grid">
+          </section>
+
+          <section class="project-section">
+            <h2>Problems Solved & What I Learned</h2>
+            <ul>
+              <li>How to translate physical system behavior into electrical design targets</li>
+              <li>How to stabilize real generator signals so downstream logic behaves consistently</li>
+              <li>How to debug breadboard hardware quickly using measurement tools</li>
+              <li>How comparator thresholds need margin to avoid noisy switching</li>
+              <li>How to structure tests so results prove performance without hand-waving</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Impact</h2>
+            <p>
+              This project delivered a complete energy conversion and indication system that was built and verified in hardware.
+              It strengthened my ability to connect mechanical behavior to electrical design decisions and reinforced the habit of
+              validating assumptions through measurement and repeatable tests.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

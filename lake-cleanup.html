@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lake Guardians Airboat System | Ethan Salazar</title>
+  <title>Air Boat for Lake Cleanup | Ethan Salazar</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="page">
 
-    <!-- Header (same as index) -->
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo">Ethan<span>Salazar</span></div>
@@ -25,7 +24,6 @@
       </div>
     </header>
 
-    <!-- Project hero -->
     <section class="project-hero">
       <div class="project-hero-inner">
         <div>
@@ -62,7 +60,6 @@
           </div>
         </div>
 
-        <!-- Hero media: swap these placeholder images later -->
         <div class="project-hero-media project-hero-media-grid">
           <figure class="project-hero-figure">
             <img src="img/lake-guardians-hero-lake.jpg"
@@ -76,11 +73,9 @@
       </div>
     </section>
 
-    <!-- Project content -->
     <main class="project-main">
       <div class="project-layout">
 
-        <!-- Sidebar FIRST so float layout works -->
         <aside>
           <div class="project-sidebar-card">
             <h3>System Concept</h3>
@@ -135,7 +130,6 @@
           </div>
         </aside>
 
-        <!-- Main content column -->
         <div class="project-main-column">
 
           <section class="project-section">
@@ -221,56 +215,51 @@
               </li>
             </ul>
 
-            <figure class="project-plot-thumb--tall">
-              <img src="img/exploded-airboat.png"
-                   alt="Final CAD rendering of the airboat with comb, fan, and hull" />
+            <figure class="project-figure project-figure--diagram project-figure--narrow">
+              <img src="img/exploded-airboat.png" alt="Final CAD rendering of the airboat with comb, fan, and hull" />
               <figcaption>
-                Exploded CAD layout showing above-water propulsion, modular electronics pod,
-                and front comb assembly.
+                Exploded CAD layout showing above-water propulsion, modular electronics pod, and front comb assembly
               </figcaption>
             </figure>
           </section>
 
           <section class="project-section">
-  <h2>Prototyping &amp; Risk Reduction</h2>
-  <p>
-    Before spending real money on electronics, we built low-fidelity prototypes for the
-    two riskiest subsystems: the comb and the hull.
-  </p>
-  <ul>
-    <li>
-      <strong>Comb prototype:</strong> PVC frame and paint-stick “teeth” tested in brushy,
-      lake-like conditions with bottles and wrappers. This validated the geometry for
-      pushing debris through vegetation and exposed obvious failure modes like tooth
-      breakage and weak attachments
-    </li>
-    <li>
-      <strong>Foam hull PoC:</strong> a bathtub-tested insulation-foam hull with a toy fan
-      to confirm buoyancy, stability, and deck geometry before committing to a full
-      epoxy-coated build
-    </li>
-    <li>
-      <strong>FMEA:</strong> quantified risk around vegetation jams, electronics flooding,
-      and RC signal loss, then drove concrete mitigations like a wiper system on the comb,
-      sealed electronics enclosures, and antenna placement changes
-    </li>
-  </ul>
+            <h2>Prototyping &amp; Risk Reduction</h2>
+            <p>
+              Before spending real money on electronics, we built low-fidelity prototypes for the
+              two riskiest subsystems: the comb and the hull.
+            </p>
+            <ul>
+              <li>
+                <strong>Comb prototype:</strong> PVC frame and paint-stick “teeth” tested in brushy,
+                lake-like conditions with bottles and wrappers. This validated the geometry for
+                pushing debris through vegetation and exposed obvious failure modes like tooth
+                breakage and weak attachments
+              </li>
+              <li>
+                <strong>Foam hull PoC:</strong> a bathtub-tested insulation-foam hull with a toy fan
+                to confirm buoyancy, stability, and deck geometry before committing to a full
+                epoxy-coated build
+              </li>
+              <li>
+                <strong>FMEA:</strong> quantified risk around vegetation jams, electronics flooding,
+                and RC signal loss, then drove concrete mitigations like a wiper system on the comb,
+                sealed electronics enclosures, and antenna placement changes
+              </li>
+            </ul>
 
-  <div class="project-plot-row">
-    <figure class="project-plot-thumb--tall">
-      <img src="img/comb-prototype.jpg"
-           alt="Comb prototype used to test geometry and jamming risk." />
-      <figcaption>Comb prototype used to test geometry and jamming risk.</figcaption>
-    </figure>
+            <div class="project-plot-row">
+              <figure class="project-figure project-figure--photo">
+                <img src="img/comb-prototype.jpg" alt="Comb prototype used to test geometry and jamming risk" />
+                <figcaption>Comb prototype used to test geometry and jamming risk</figcaption>
+              </figure>
 
-    <figure class="project-plot-thumb--tall">
-      <img src="img/hull-prototype.jpg"
-           alt="Foam hull proof-of-concept verifying buoyancy and stability." />
-      <figcaption>Foam hull proof-of-concept verifying buoyancy and stability.</figcaption>
-    </figure>
-  </div>
-</section>
-
+              <figure class="project-figure project-figure--photo">
+                <img src="img/hull-prototype.jpg" alt="Foam hull proof-of-concept verifying buoyancy and stability" />
+                <figcaption>Foam hull proof-of-concept verifying buoyancy and stability</figcaption>
+              </figure>
+            </div>
+          </section>
 
           <section class="project-section">
             <h2>Design for Manufacturing &amp; Assembly</h2>
@@ -356,7 +345,6 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>

@@ -9,7 +9,6 @@
 <body>
   <div class="page">
 
-    <!-- Header (same as index) -->
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo">Ethan<span>Salazar</span></div>
@@ -25,23 +24,23 @@
       </div>
     </header>
 
-    <!-- Project hero -->
     <section class="project-hero">
       <div class="project-hero-inner">
         <div>
           <div class="project-eyebrow">Course Project · ME 338 Machine Elements</div>
           <h1 class="project-title">Remote Control Kei Truck</h1>
           <p class="project-subtitle">
-            RC “kei truck” built for the ME 338 Engineering Design Project with a custom drivetrain,
-            chassis, and body. Designed to meet course performance requirements, survive repeated
-            testing, and compete in the final race with reliable handling and power delivery.
+            Remote-controlled kei truck designed and built as a full mechanical systems project.
+            The vehicle features a custom drivetrain, chassis, and body, engineered to meet
+            defined performance requirements, withstand repeated testing, and compete reliably
+            in a final race.
           </p>
         </div>
 
         <div class="project-meta">
           <div class="project-meta-item">
             <span class="project-meta-label">Role</span>
-            <span>Mechanical design, CAD, manufacturing support, test iteration, documentation</span>
+            <span>Mechanical design, CAD, manufacturing support, testing, documentation</span>
           </div>
 
           <div class="project-meta-item project-meta-timeline">
@@ -51,35 +50,32 @@
 
           <div class="project-meta-item">
             <span class="project-meta-label">Key Tools</span>
-            <span>CAD, 3D printing, geartrain design, DC motor + gearing, RC electronics, test iteration</span>
+            <span>CAD, 3D printing, geartrain design, DC motor and gearing, RC electronics, test iteration</span>
           </div>
         </div>
 
-        <!-- Hero media (swap for your real images) -->
         <div class="project-hero-media project-hero-media-grid">
           <figure class="project-hero-figure">
             <img src="img/kei-hero-1.jpg" alt="Remote control kei truck assembled and ready for testing" />
           </figure>
           <figure class="project-hero-figure">
-            <img src="img/kei-hero-2.jpg" alt="Remote control kei truck side angle showing chassis and body" />
+            <img src="img/kei-hero-2.jpg" alt="Remote control kei truck showing chassis and body layout" />
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- Project content -->
     <main class="project-main">
       <div class="project-layout">
 
-        <!-- Sidebar FIRST so float layout works -->
         <aside>
           <div class="project-sidebar-card">
             <h3>Build Highlights</h3>
             <ul>
               <li>Custom chassis with integrated mounts for drivetrain and electronics</li>
-              <li>Designed geartrain to hit required speed and torque targets</li>
-              <li>3D printed body and structural components for rapid iteration</li>
-              <li>Tested repeatedly and iterated for reliability before final race</li>
+              <li>Geartrain designed to meet required speed and torque targets</li>
+              <li>3D printed structural components to support rapid iteration</li>
+              <li>Extensive testing and refinement prior to the final race</li>
             </ul>
           </div>
 
@@ -87,160 +83,120 @@
             <h3>Project Links</h3>
             <ul>
               <li>
-                <a href="files/TRR.pdf" target="_blank" rel="noopener noreferrer" download>
-                  TRR Requirements & Test Readiness (PDF)
-                </a>
-              </li>
-              <li>
-                <a href="files/CDR.pdf" target="_blank" rel="noopener noreferrer" download>
-                  CDR Design Review (PDF)
-                </a>
-              </li>
-              <li>
                 <a href="files/FDR.pdf" target="_blank" rel="noopener noreferrer" download>
-                  FDR Final Design Report (PDF)
-                </a>
-              </li>
-              <li>
-                <a href="files/ME338-project-slides.pdf" target="_blank" rel="noopener noreferrer" download>
-                  Course Project Requirements Slides (PDF)
+                  Final Design Report (PDF)
                 </a>
               </li>
             </ul>
           </div>
 
           <div class="project-sidebar-card" style="margin-top:1rem;">
-            <h3>Data Highlights</h3>
+            <h3>Design Artifacts</h3>
 
-            <figure class="project-plot-thumb">
-              <img src="img/kei-cad-1.jpg" alt="CAD snapshot of the chassis and drivetrain layout" />
-              <figcaption>CAD layout used to drive packaging and mounting decisions</figcaption>
+            <figure class="project-figure project-figure--diagram">
+              <img src="img/kei-cad-1.png" alt="CAD snapshot of the chassis and drivetrain layout" />
+              <figcaption>Steering and servo assembly modeled in CAD to control packaging and motion limits</figcaption>
             </figure>
 
-            <figure class="project-plot-thumb">
-              <img src="img/kei-cad-2.jpg" alt="CAD snapshot showing geartrain and axle integration" />
-              <figcaption>Drivetrain integration focused on alignment and repeatable assembly</figcaption>
+            <figure class="project-figure project-figure--diagram">
+              <img src="img/kei-cad-2.png" alt="CAD snapshot showing geartrain and axle integration" />
+              <figcaption>Full chassis and drivetrain layout shown without body panels for clarity</figcaption>
             </figure>
-
-            <p class="plot-note">
-              Swap these for your cleanest CAD screenshots and one final build photo that tells the whole story
-            </p>
           </div>
         </aside>
 
-        <!-- Main content column -->
         <div class="project-main-column">
 
           <section class="project-section">
             <h2>Overview</h2>
             <p>
-              This project was the ME 338 Engineering Design Project where we built a remote-controlled vehicle to
-              meet a defined set of performance requirements and then prove it through structured testing and a
-              final race. I treated it like a real product cycle: translate requirements into design targets,
-              build a system that can be assembled repeatedly, then iterate until performance and reliability
-              were both solid.
+              This project served as the ME 338 Engineering Design Project, where teams were tasked
+              with designing and building a remote-controlled vehicle to meet a defined set of
+              performance requirements and demonstrate compliance through testing and competition.
             </p>
             <p>
-              The truck performed well in testing and in the final race, and the final documentation package
-              captures the requirements, design decisions, and verification results.
+              I approached the project as a complete mechanical system, translating requirements
+              into design targets, building for repeatable assembly, and iterating based on test
+              results until both performance and reliability were consistently achieved.
             </p>
           </section>
 
           <section class="project-section">
             <h2>Requirements & Verification Plan</h2>
             <p>
-              The first step was turning the course prompt into engineering targets that could be validated
-              with tests, not opinions. The TRR and design reviews captured what the vehicle had to do and
-              how we planned to prove it.
+              Early in the project, course requirements were converted into measurable engineering
+              targets that could be validated through structured testing rather than subjective
+              evaluation.
             </p>
             <ul>
-              <li>Mapped requirements to measurable targets like speed, control, and repeatability</li>
-              <li>Defined test procedures that could be repeated run-to-run</li>
-              <li>Used the reviews to lock interfaces, reduce risk, and prevent late rework</li>
+              <li>Mapped course requirements to quantitative performance targets</li>
+              <li>Defined repeatable test procedures to evaluate speed and control</li>
+              <li>Used design reviews to lock interfaces and reduce late-stage rework</li>
             </ul>
 
-            <figure class="project-plot-thumb">
-              <img src="img/kei-requirements.jpg" alt="Screenshot of requirements or test matrix from report" />
-              <figcaption>Placeholder for a requirements or test matrix screenshot from TRR or FDR</figcaption>
+            <figure class="project-figure project-figure--diagram project-figure--narrow">
+              <img src="img/kei-requirements.png" alt="Final race track layout and requirements" />
+              <figcaption>Final race track layout with performance requirements including three laps under 60 seconds</figcaption>
             </figure>
           </section>
 
           <section class="project-section">
             <h2>Mechanical Design</h2>
             <p>
-              The core mechanical problem was packaging a drivetrain and electronics into a chassis that was
-              stiff enough to hold alignment, serviceable enough to repair quickly, and light enough to
-              perform well.
+              The primary mechanical challenge was packaging the drivetrain, steering, and electronics
+              into a chassis that maintained alignment, allowed fast servicing, and minimized mass.
             </p>
             <ul>
-              <li>Designed the chassis layout around drivetrain alignment and clean mounting references</li>
-              <li>Planned assembly so components could be swapped without disassembling the whole car</li>
-              <li>Used CAD to control tolerances, clearances, and fastener access before printing parts</li>
+              <li>Designed the chassis around fixed drivetrain reference planes</li>
+              <li>Planned assembly so major components could be removed independently</li>
+              <li>Used CAD to manage tolerances, clearances, and fastener access before fabrication</li>
             </ul>
-
-            <figure class="project-plot-thumb">
-              <img src="img/kei-chassis.jpg" alt="Photo of the chassis during assembly" />
-              <figcaption>Placeholder for a mid-build photo that shows the chassis and mounting layout</figcaption>
-            </figure>
           </section>
 
           <section class="project-section">
             <h2>Drivetrain & Controls</h2>
             <p>
-              A big portion of performance came down to drivetrain choices. I focused on making sure the
-              gearing and layout could deliver usable torque while still reaching the target speed.
+              Vehicle performance was driven largely by drivetrain decisions, particularly gearing
+              and alignment under load.
             </p>
             <ul>
-              <li>Selected gearing based on target speed and expected loading during the race course</li>
-              <li>Designed mounts and interfaces to keep gear mesh and alignment consistent</li>
-              <li>Packaged wiring and electronics to reduce failures during vibration and impacts</li>
+              <li>Selected gear ratios to balance torque and top speed for the race course</li>
+              <li>Designed mounts to maintain gear mesh through vibration and impacts</li>
+              <li>Routed wiring and electronics to minimize failures during operation</li>
             </ul>
-
-            <figure class="project-plot-thumb">
-              <img src="img/kei-drivetrain.jpg" alt="Close-up photo of drivetrain area" />
-              <figcaption>Placeholder for a drivetrain close-up photo showing geartrain packaging</figcaption>
-            </figure>
           </section>
 
           <section class="project-section">
             <h2>Testing & Race Performance</h2>
             <p>
-              We validated the vehicle through the course test plan and used early test results to drive
-              improvements before final competition.
+              The truck was validated through repeated testing cycles, with early failures used to
+              guide targeted design improvements ahead of the final race.
             </p>
             <ul>
-              <li>Ran repeated test cycles to confirm performance and durability</li>
-              <li>Fixed issues found in testing with targeted design changes instead of full redesigns</li>
-              <li>Vehicle performed reliably through testing and the final race</li>
+              <li>Ran repeated tests to confirm performance and durability</li>
+              <li>Resolved test failures through focused design changes</li>
+              <li>Vehicle completed testing and final race without major issues</li>
             </ul>
-
-            <div class="project-hero-media project-hero-media-grid">
-              <figure class="project-hero-figure">
-                <img src="img/kei-test-1.jpg" alt="Kei truck during testing" />
-              </figure>
-              <figure class="project-hero-figure">
-                <img src="img/kei-test-2.jpg" alt="Kei truck final configuration" />
-              </figure>
-            </div>
           </section>
 
           <section class="project-section">
             <h2>Problems Solved & What I Learned</h2>
             <ul>
-              <li>How to translate requirements into design targets you can actually test</li>
-              <li>How to manage interfaces so assembly stays repeatable even after iterations</li>
-              <li>How drivetrain alignment and packaging decisions show up as reliability problems later</li>
-              <li>How to use structured testing to drive changes instead of guessing</li>
-              <li>How to document decisions clearly enough that someone else can rebuild the system</li>
+              <li>Translating requirements into testable engineering targets</li>
+              <li>Managing mechanical interfaces to preserve alignment through iterations</li>
+              <li>Recognizing how drivetrain packaging decisions affect long-term reliability</li>
+              <li>Using structured testing to drive design changes</li>
+              <li>Documenting design decisions so the system can be rebuilt by others</li>
             </ul>
           </section>
 
           <section class="project-section">
             <h2>Impact</h2>
             <p>
-              This project was a full mini product cycle: requirements, design reviews, build, verification, and
-              competition. The final truck met the course intent and performed well in testing and the final race,
-              and the TRR, CDR, and FDR capture the engineering tradeoffs and validation approach end to end.
+              This project represented a complete mechanical design cycle from requirements through
+              competition. The final vehicle met course objectives, performed reliably in testing
+              and racing, and was supported by a full documentation package that captured the
+              engineering decisions and validation process end to end.
             </p>
           </section>
 
@@ -248,7 +204,6 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>

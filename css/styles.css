@@ -637,13 +637,6 @@ body {
   margin: 0 0 0.9rem 0;
 }
 
-.project-plot-thumb--tall img {
-  max-height: 500px;
-}
-
-.project-plot-thumb--tall-2 img {
-  max-width: 675px;
-}
 
 /* Two-up image row for large prototypes below the sidebar */
 .project-plot-row {
@@ -660,11 +653,56 @@ body {
   }
 }
 
+/* ===== Project figures (one system) ===== */
+.project-figure {
+  margin: 1rem 0 1.25rem;
+}
+
+/* Prevent figures from sitting underneath the floated sidebar */
+.project-figure {
+  display: flow-root;
+}
+
+.project-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 0.8rem;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+}
+
+/* Default: photos (crop nicely) */
+.project-figure--photo img {
+  height: 300px;
+  min-height: 300px;              /* adjust 260–360 */
+  object-fit: cover;
+}
+
+/* CAD / plots: do NOT crop */
+.project-figure--diagram img {
+  height: auto;
+  max-height: 520px;          /* keeps it from getting absurdly tall */
+  object-fit: contain;
+  background: #ffffff;
+}
+
+/* Narrow technical figure (makes it feel “reference”, not “hero”) */
+.project-figure--narrow {
+  max-width: 720px;           /* tweak 640–760 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-figure figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
 .project-plot-thumb img {
   width: 100%;
-  max-height: 300px;     /* tweak 160–220px to taste */
   border-radius: 0.8rem;
-  object-fit: cover;
   display: block;
   border: 1px solid #e5e7eb;
   background: #f3f4f6;
@@ -725,4 +763,14 @@ body {
   .project-hero-media-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.footer-divider {
+  margin: 0 0.4rem;
+  color: #9ca3af;
 }

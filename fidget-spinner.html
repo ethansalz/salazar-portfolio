@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fidget Spinner CAD & Manufacturing | Ethan Salazar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header (same as index) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Ethan<span>Salazar</span></div>
+
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Project hero -->
+    <section class="project-hero">
+      <div class="project-hero-inner">
+        <div>
+          <div class="project-eyebrow">Course Project · ME 302 Intro to Engineering Design</div>
+          <h1 class="project-title">Fidget Spinner CAD & Manufacturing</h1>
+          <p class="project-subtitle">
+            End to end build that started with a hand sketch and finished with an assembled fidget spinner.
+            Injection molded the main body in polypropylene using a CNC machined mold, and 3D printed the
+            bearing caps in PETG for fast iteration and clean press fits.
+          </p>
+        </div>
+
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Role</span>
+            <span>CAD, CAM, mold machining, injection molding, 3D printing, assembly, documentation</span>
+          </div>
+
+          <div class="project-meta-item project-meta-timeline">
+            <span class="project-meta-label">Timeline</span>
+            <span>1 semester · ME 302 Introduction to Engineering Design and Graphics</span>
+          </div>
+
+          <div class="project-meta-item">
+            <span class="project-meta-label">Key Tools</span>
+            <span>SolidWorks, Fusion 360 CAM, Cura, CNC mill, injection molding press, 3D printer</span>
+          </div>
+        </div>
+
+        <!-- Hero media -->
+        <div class="project-hero-media project-hero-media-grid">
+          <figure class="project-hero-figure">
+            <img src="img/spinner.png" alt="Final assembled fidget spinner" />
+          </figure>
+          <figure class="project-hero-figure">
+            <img src="img/spinner-mold.png" alt="CNC machined injection mold plates used for the spinner body" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project content -->
+    <main class="project-main">
+      <div class="project-layout">
+
+        <!-- Sidebar FIRST so float layout works -->
+        <aside>
+          <div class="project-sidebar-card">
+            <h3>Build Highlights</h3>
+            <ul>
+              <li>Sketch to CAD to manufactured assembly workflow</li>
+              <li>Injection molded main body using polypropylene pellets</li>
+              <li>CNC machined mold core and cavity plates from CAM toolpaths</li>
+              <li>3D printed top and bottom bearing caps in PETG</li>
+              <li>Press fit assembly using standard 608 bearings</li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Project Links</h3>
+            <ul>
+              <li>
+                <a href="files/Fidget Spinner Project Final Report.pdf" target="_blank" rel="noopener noreferrer" download>
+                  Final Report (PDF)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-sidebar-card" style="margin-top:1rem;">
+            <h3>Design Artifacts</h3>
+
+            <figure class="project-figure project-figure--diagram">
+              <img src="img/spinner-drawing.png" alt="Dimensioned drawing of the spinner body" />
+              <figcaption>Spinner body drawing used to lock bearing pocket geometry and overall envelope</figcaption>
+            </figure>
+
+            <figure class="project-figure project-figure--diagram">
+              <img src="img/cap-drawing.png" alt="Dimensioned drawing of the bearing cap" />
+              <figcaption>Bearing cap drawing used to control press fit and grip thickness</figcaption>
+            </figure>
+
+            <figure class="project-figure project-figure--diagram">
+              <img src="img/mold-drawing.png" alt="Dimensioned drawing of the spinner mold plate" />
+              <figcaption>Mold plate drawing showing the core and cavity features that define the molded body</figcaption>
+            </figure>
+          </div>
+        </aside>
+
+        <!-- Main content column -->
+        <div class="project-main-column">
+
+          <section class="project-section">
+            <h2>Overview</h2>
+            <p>
+              This project was a full manufacturing workflow exercise focused on making a simple product
+              with real processes and real constraints. The final design combines an injection molded body
+              with 3D printed caps and standard bearings, resulting in a spinner that assembles cleanly and
+              can be reproduced with the same mold and settings.
+            </p>
+            <p>
+              The work covered CAD modeling, dimensioned drawings, CAM programming, CNC machining of mold
+              plates, injection molding, additive manufacturing for secondary parts, and final press fit
+              assembly.
+            </p>
+          </section>
+
+          <section class="project-section">
+            <h2>Design Constraints</h2>
+            <p>
+              The geometry was built around the bearings and the interfaces that control feel and assembly.
+              I used drawings to lock the critical fits early, then refined the outer form and arm geometry
+              to keep mass balanced and comfortable in hand.
+            </p>
+            <ul>
+              <li>Designed around standard 608 bearing geometry and press fit pockets</li>
+              <li>Balanced 3 arm layout for predictable spin and stable feel</li>
+              <li>Defined cap interface to protect the bearing and improve grip comfort</li>
+              <li>Kept features moldable with clean parting lines and reasonable draft</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Manufacturing Plan</h2>
+            <p>
+              The part was split based on process strengths. The body was injection molded for repeatability,
+              surface finish, and faster production once the mold existed. The caps were 3D printed to speed
+              iteration and tune the press fit without reworking the mold.
+            </p>
+            <ul>
+              <li>Modeled parts in CAD and generated drawings for critical dimensions</li>
+              <li>Programmed CAM toolpaths for the core and cavity mold plates</li>
+              <li>Machined the mold plates on a CNC mill and verified fit before molding</li>
+              <li>Injection molded polypropylene parts and adjusted process settings for consistency</li>
+              <li>3D printed PETG caps to finalize the grip interface and press fit</li>
+            </ul>
+
+            <div class="project-plot-row">
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Bill of Materials & Assembly</h2>
+            <p>
+              Assembly was designed to be simple and repeatable. Bearings press into the molded body, then
+              the caps press into the center bearing to create a comfortable grip surface and protect the
+              bearing during use.
+            </p>
+            <ul>
+              <li>Injection molded spinner body in polypropylene</li>
+              <li>Standard ball bearings used for rotation and arm mass</li>
+              <li>Top and bottom bearing caps 3D printed in PETG</li>
+              <li>Press fit sequence designed to avoid adhesives and simplify rework</li>
+            </ul>
+
+            <figure class="project-figure project-figure--diagram project-figure--narrow">
+              <img src="img/assembly plan.png" alt="Assembly plan diagram for pressing bearings and caps" />
+              <figcaption>Assembly flow showing bearing press into the body and cap press into the center bearing</figcaption>
+            </figure>
+          </section>
+
+          <section class="project-section">
+            <h2>Validation</h2>
+            <p>
+              To verify basic durability, I ran a drop test validation case and documented pass criteria to
+              confirm the design could survive typical handling and impacts.
+            </p>
+            <ul>
+              <li>Drop test case from a defined height onto a rigid surface</li>
+              <li>Evaluated stress and deformation at the arm and bearing pocket regions</li>
+              <li>Captured results and assumptions in the final report documentation</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Problems Solved &amp; What I Learned</h2>
+            <ul>
+              <li>How to translate a sketch into a manufacturable CAD model with real constraints</li>
+              <li>How mold design choices show up directly in part quality and assembly fit</li>
+              <li>How to use CAM and machining strategy to protect critical surfaces</li>
+              <li>How to pick the right process per part instead of forcing one process everywhere</li>
+              <li>How to write documentation that lets someone reproduce the build</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Impact</h2>
+            <p>
+              This project was a complete build that touched CAD, CAM, CNC machining, injection molding, and additive
+              manufacturing in one workflow. The result is a functioning spinner backed by drawings, process notes,
+              and a validation case that ties the design back to repeatable manufacturing.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Ethan Salazar. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
