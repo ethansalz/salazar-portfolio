@@ -278,6 +278,15 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.nda-note{
+  margin-top: 1.75rem;     /* pushes it down away from cards */
+  text-align: center;      /* centers the line */
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
 /* Thumbnail area for Selected Projects */
 .card-media {
   margin: 0.65rem 0 0.8rem;
