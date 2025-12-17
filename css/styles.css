@@ -261,7 +261,7 @@ body {
 }
 
 .card:hover {
-  border-color: rgba(191, 87, 0, 0.7); /* burnt orange edge */
+  border-color: 1px solid #e5e7eb; /* burnt orange edge */
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
 }
@@ -299,6 +299,13 @@ body {
   object-fit: cover;
 }
 
+/* Subtle note text */
+.section-note{
+  margin: 0.4rem 0 1rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
 /* Tags */
 .tag-list {
   display: flex;
@@ -312,7 +319,7 @@ body {
   padding: 0.14rem 0.6rem;
   border-radius: 999px;
   background-color: var(--accent-soft);
-  color: #7c2d12;
+  color: #774151;
 }
 
 /* Inline "View project" label */
