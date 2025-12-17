@@ -549,8 +549,15 @@ body {
   font-weight: 600;
   color: #4b5563;
 }
+
 .project-meta-timeline {
-  margin-left: auto;
+  margin-left: auto; /* keep your desktop/iPad behavior */
+}
+
+@media (max-width: 600px) {
+  .project-meta-timeline {
+    margin-left: 0;  /* stop pushing to the right on mobile */
+  }
 }
 
 
