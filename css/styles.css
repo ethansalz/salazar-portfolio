@@ -120,6 +120,49 @@ body {
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 .hero-placeholder { display: none; }
 
+/* Hero right column: photo + stats stacked */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 28px;
+  animation: fadeUp 0.5s ease 0.55s both;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero-stat-val {
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.hero-stat-accent {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.hero-stat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 /* ========== SECTIONS ========== */
 .section, .section-alt {
   padding: 72px 0; background-color: transparent;
@@ -141,6 +184,17 @@ body {
   font-family: var(--mono); font-size: 10px; font-weight: 700;
   color: var(--text-dim); text-transform: uppercase;
   letter-spacing: 0.1em; margin-top: 40px;
+}
+
+/* Section number labels (// 01, // 02, etc) */
+.section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 /* ========== BUTTONS ========== */
@@ -431,6 +485,9 @@ body {
   .hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-aside { order: -1; }
   .hero-photo { width: 160px; height: 160px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat-val { font-size: 18px; }
+  .hero-stat-accent { font-size: 14px; }
   .nav { flex-wrap: wrap; gap: 4px; }
   .about-card { grid-template-columns: 1fr; padding: 20px; }
   .about-media img { height: 140px; }
