@@ -487,6 +487,23 @@
       el.style.opacity = '0';
       observer.observe(el);
     });
+
+    // Scroll progress accent line
+    const accentLine = document.querySelector('.hero::after') || (() => {
+      const el = document.createElement('div');
+      el.id = 'scroll-accent';
+      el.style.cssText = 'position:fixed;top:0;left:0;width:3px;height:0%;background:var(--accent);pointer-events:none;z-index:100;transition:height 0.05s linear;';
+      document.body.appendChild(el);
+      return el;
+    })();
+
+    const scrollLine = document.getElementById('scroll-accent');
+    if (scrollLine) {
+      window.addEventListener('scroll', () => {
+        const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        scrollLine.style.height = (pct * 100) + '%';
+      }, { passive: true });
+    }
   </script>
 </body>
 </html>
