@@ -288,6 +288,19 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: 3px;
 }
+
+.experience-location {
+  display: block;
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-bottom: 1px;
+}
+
+.experience-dates {
+  display: block;
+  font-size: 10px;
+  color: var(--text-dim);
+}
 .experience-item ul {
   padding-left: 16px; font-family: var(--sans);
   font-size: 13px; line-height: 1.65; color: var(--text-mid);
@@ -361,7 +374,7 @@ body {
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 80px 80px; opacity: 0.5; pointer-events: none;
+  background-size: 80px 80px; opacity: 0.15; pointer-events: none;
 }
 .project-hero-inner {
   max-width: 1100px; margin: 0 auto;
