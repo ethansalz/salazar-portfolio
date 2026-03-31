@@ -149,7 +149,7 @@ body {
 /* Position each artifact in the right-side canvas */
 .hero-showcase-item[data-index="0"] {
   /* Exploded airboat — top right */
-  top: 50%;
+  top: 20%;
   right: 10%;
   width: 360px;
 }
@@ -170,8 +170,8 @@ body {
 
 .hero-showcase-item[data-index="3"] {
   /* Spinner drawing — upper center-right */
-  bottom: 20%;
-  right: 50%;
+  bottom: 10%;
+  right: 40%;
   width: 250px;
 }
 
