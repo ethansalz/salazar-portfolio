@@ -157,7 +157,7 @@ body {
 .hero-showcase-item[data-index="1"] {
   /* Temp plot — bottom right */
   top: 15%;
-  right: 12%;
+  left: 20%;
   width: 300px;
 }
 
@@ -171,7 +171,7 @@ body {
 .hero-showcase-item[data-index="3"] {
   /* Spinner drawing — upper center-right */
   bottom: 20%;
-  right: 10%;
+  left: 20%;
   width: 250px;
 }
 
