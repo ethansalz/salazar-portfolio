@@ -154,21 +154,14 @@ body {
   width: 360px;
 }
 
-.hero-showcase-item[data-index="1"] { 
-  /* Temp plot — bottom right */
-  top: 10%;
-  right: 45%;
-  width: 300px;
-}
-
-.hero-showcase-item[data-index="2"] {
+.hero-showcase-item[data-index="1"] {
   /* Circuit — center right */
   bottom: 10%;
   right: 5%;
   width: 300px;
 }
 
-.hero-showcase-item[data-index="3"] {
+.hero-showcase-item[data-index="2"] {
   /* Spinner drawing — upper center-right */
   bottom: 13%;
   right: 40%;
