@@ -100,7 +100,7 @@ body {
 }
 .hero-text p {
   font-family: var(--sans); font-size: 15px; line-height: 1.7;
-  color: var(--text-mid); max-width: 680px;
+  color: var(--text-mid); max-width: 780px;
   animation: fadeUp 0.5s ease 0.35s both;
   position: relative; z-index: 2;
 }
