@@ -83,68 +83,62 @@ body {
   display: none;
 }
 .hero-inner {
-  display: grid; grid-template-columns: 1fr 320px;
-  gap: 64px; align-items: center; position: relative;
+  display: block; position: relative;
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+}
+.hero-text {
+  position: relative; z-index: 2;
 }
 .hero-text h1 {
   font-family: var(--sans);
-  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
   line-height: 1.05; font-weight: 800;
   letter-spacing: -0.04em; color: var(--text);
-  margin-bottom: 20px;
+  margin-bottom: 20px; white-space: nowrap;
   animation: fadeUp 0.6s ease 0.2s both;
+  position: relative; z-index: 2;
 }
 .hero-text p {
   font-family: var(--sans); font-size: 15px; line-height: 1.7;
-  color: var(--text-mid); max-width: 520px;
+  color: var(--text-mid); max-width: 680px;
   animation: fadeUp 0.5s ease 0.35s both;
+  position: relative; z-index: 2;
 }
 .hero-actions {
   display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
   animation: fadeUp 0.5s ease 0.45s both;
+  position: relative; z-index: 2;
 }
 
 .hero-aside {
-  display: flex; justify-content: center;
-  animation: fadeUp 0.7s ease 0.4s both;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 .hero-showcase {
-  animation: fadeUp 0.7s ease 0.4s both;
-  width: 320px;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .hero-showcase-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .hero-showcase-item {
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  aspect-ratio: 4/3;
+  position: absolute;
   display: block;
-  text-decoration: none;
-  transition: border-color 0.4s ease, opacity 0.4s ease, filter 0.4s ease;
-  opacity: 0.35;
-  max-height: 120px;
-  background: #0f0f0f;
-  filter: saturate(0);
+  mix-blend-mode: screen;
+  opacity: 0.12;
+  transition: opacity 1s ease;
+  pointer-events: none;
 }
 
 .hero-showcase-item.active {
-  border-color: var(--accent);
-  opacity: 1;
-  filter: saturate(1);
-  box-shadow: 0 0 20px rgba(191,87,0,0.08);
-}
-
-.hero-showcase-item:hover {
-  opacity: 0.8;
-  filter: saturate(0.5);
+  opacity: 0.25;
 }
 
 .hero-showcase-item img {
@@ -152,24 +146,51 @@ body {
   height: 100%;
   object-fit: contain;
   display: block;
-  padding: 4px;
+}
+
+/* Position each artifact scattered around the hero */
+.hero-showcase-item[data-index="0"] {
+  /* Exploded airboat — top right */
+  top: 5%;
+  right: 2%;
+  width: 340px;
+}
+
+.hero-showcase-item[data-index="1"] {
+  /* Temp plot — middle right, overlapping text area */
+  top: 40%;
+  right: 15%;
+  width: 280px;
+}
+
+.hero-showcase-item[data-index="2"] {
+  /* Circuit — bottom left area */
+  bottom: 8%;
+  left: 45%;
+  width: 300px;
+}
+
+.hero-showcase-item[data-index="3"] {
+  /* Spinner drawing — top center-right */
+  top: 8%;
+  right: 30%;
+  width: 220px;
 }
 
 .hero-placeholder { display: none; }
 
 /* Hero right column: showcase + stats stacked */
 .hero-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 320px;
+  display: contents;
 }
 
 .hero-stats {
   display: flex;
   gap: 28px;
   animation: fadeUp 0.5s ease 0.55s both;
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
 }
 
 .hero-stat {
@@ -543,11 +564,12 @@ body {
 
 @media (max-width: 768px) {
   .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-  .hero-aside { order: -1; }
-  .hero-showcase-grid { width: 260px; gap: 6px; }
+  .hero-aside { display: none; }
+  .hero-showcase { display: none; }
   .hero-stats { gap: 20px; }
   .hero-stat-val { font-size: 18px; }
   .hero-stat-accent { font-size: 18px; }
+  .hero-text h1 { white-space: normal; }
   .nav { flex-wrap: wrap; gap: 4px; }
   .about-card { grid-template-columns: 1fr; padding: 20px; }
   .about-media img { height: 140px; }
