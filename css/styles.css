@@ -165,7 +165,7 @@ body {
 
 .hero-showcase-item[data-index="2"] {
   /* Circuit — bottom center, below the description */
-  bottom: 2%;
+  bottom: 50%;
   left: 25%;
   width: 320px;
 }
