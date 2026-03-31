@@ -172,7 +172,7 @@ body {
 
 .hero-showcase-item[data-index="3"] {
   /* Spinner drawing — right side, vertically centered */
-  top: 15%;
+  bottom: 50%;
   right: 5%;
   width: 260px;
 }
