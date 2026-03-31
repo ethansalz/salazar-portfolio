@@ -156,8 +156,8 @@ body {
 
 .hero-showcase-item[data-index="1"] {
   /* Temp plot — bottom right */
-  bottom: 15%;
-  right: 20%;
+  top: 10%;
+  right: 30%;
   width: 300px;
 }
 
