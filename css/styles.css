@@ -149,22 +149,22 @@ body {
 /* Position each artifact in the right-side canvas */
 .hero-showcase-item[data-index="0"] {
   /* Exploded airboat — top right */
-  top: 20%;
+  top: 10%;
   right: 10%;
   width: 360px;
 }
 
-.hero-showcase-item[data-index="1"] {
+.hero-showcase-item[data-index="1"] { 
   /* Temp plot — bottom right */
   top: 10%;
-  right: 30%;
+  right: 50%;
   width: 300px;
 }
 
 .hero-showcase-item[data-index="2"] {
   /* Circuit — center right */
-  bottom: 20%;
-  right: 20%;
+  bottom: 10%;
+  right: 10%;
   width: 300px;
 }
 
