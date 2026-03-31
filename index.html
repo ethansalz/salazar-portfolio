@@ -31,6 +31,7 @@
       <div class="container hero-inner">
         <section class="hero-text">
           <div style="font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:20px;animation:fadeUp 0.5s ease 0.1s both;">
+            <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;box-shadow:0 0 8px var(--accent);"></span>
             Mechanical Engineering &amp; Program Management
           </div>
           <h1>Welcome to<br>my portfolio</h1>
@@ -47,8 +48,25 @@
 
        <section class="hero-aside">
   <div class="hero-right">
-    <div class="hero-photo">
-      <img src="img/ethan-headshot.JPG" alt="Ethan Salazar headshot" />
+    <div class="hero-showcase">
+      <div class="hero-showcase-grid">
+        <a href="telemetry.html" class="hero-showcase-item active" data-index="0">
+          <img src="img/telemetry-main.JPG" alt="Vehicle telemetry system" />
+          <span class="hero-showcase-label">Telemetry System</span>
+        </a>
+        <a href="battery-chamber.html" class="hero-showcase-item" data-index="1">
+          <img src="img/battery-main.JPG" alt="Battery test chamber" />
+          <span class="hero-showcase-label">Battery Chamber</span>
+        </a>
+        <a href="kei-truck.html" class="hero-showcase-item" data-index="2">
+          <img src="img/kei-hero-1.JPG" alt="RC kei truck" />
+          <span class="hero-showcase-label">RC Kei Truck</span>
+        </a>
+        <a href="lake-cleanup.html" class="hero-showcase-item" data-index="3">
+          <img src="img/lake-main.png" alt="Lake cleanup air boat" />
+          <span class="hero-showcase-label">Lake Cleanup</span>
+        </a>
+      </div>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
@@ -202,21 +220,10 @@
             </div>
             <div class="card-cta">View project →</div>
           </a>
-
-          <a href="treasure-chest.html" class="card">
-            <h3>Treasure Chest LED Cooler</h3>
-            <p>
-              Turned a $6 Goodwill treasure chest into a functioning light-up cooler
-              with motion-activated LEDs and decorative loot, built almost entirely
-              from garage materials for under $30.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Build</span>
-              <span class="tag">Resourceful Design</span>
-            </div>
-            <div class="card-cta">View project →</div>
-          </a>
         </div>
+        <p class="nda-note">
+        Additional professional projects are under NDA and cannot be shared publicly.
+        </p>
       </div>
     </section>
 
@@ -456,7 +463,7 @@
           I love learning new things and meeting new people. Let's connect!
         </p>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#2f4a6f4a5b474e415c4e434e554e5d014b4a59" class="btn primary">Email Me</a>
+          <a href="/cdn-cgi/l/email-protection#b7d2f7d2c3dfd6d9c4d6dbd6cdd6c599d3d2c1" class="btn primary">Email Me</a>
           <a href="https://www.linkedin.com/in/ethansalz/" class="btn outline" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
@@ -510,4 +517,22 @@
     const scrollLine = document.getElementById('scroll-accent');
     if (scrollLine) {
       window.addEventListener('scroll', () => {
-        const pct = window.scrollY / (document.documentElement.sc
+        const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        scrollLine.style.height = (pct * 100) + '%';
+      }, { passive: true });
+    }
+
+    // Hero showcase rotation — cycle highlight every 3s
+    (function() {
+      const items = document.querySelectorAll('.hero-showcase-item');
+      if (!items.length) return;
+      let current = 0;
+      setInterval(function() {
+        items[current].classList.remove('active');
+        current = (current + 1) % items.length;
+        items[current].classList.add('active');
+      }, 3000);
+    })();
+  </script>
+</body>
+</html>
