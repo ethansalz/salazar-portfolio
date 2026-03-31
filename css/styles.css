@@ -151,29 +151,29 @@ body {
 /* Position each artifact scattered around the hero */
 .hero-showcase-item[data-index="0"] {
   /* Exploded airboat — upper center, near/overlapping the headline */
-  top: 2%;
-  left: 35%;
+  top: 0%;
+  left: 0%;
   width: 380px;
 }
 
 .hero-showcase-item[data-index="1"] {
   /* Temp plot — lower right */
-  bottom: 5%;
-  right: 3%;
+  bottom: 0%;
+  right: 0%;
   width: 300px;
 }
 
 .hero-showcase-item[data-index="2"] {
   /* Circuit — bottom center, below the description */
-  bottom: 2%;
-  left: 25%;
+  bottom: 0%;
+  left: 0%;
   width: 320px;
 }
 
 .hero-showcase-item[data-index="3"] {
   /* Spinner drawing — right side, vertically centered */
-  top: 15%;
-  right: 5%;
+  top: 0%;
+  right: 0%;
   width: 260px;
 }
 
