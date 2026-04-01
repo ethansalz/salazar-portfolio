@@ -130,13 +130,13 @@ body {
   position: absolute;
   display: block;
   mix-blend-mode: screen;
-  opacity: 0.12;
+  opacity: 0.3;
   transition: opacity 1s ease;
   pointer-events: none;
 }
 
 .hero-showcase-item.active {
-  opacity: 0.25;
+  opacity: 0.5;
 }
 
 .hero-showcase-item img {
