@@ -149,7 +149,7 @@ body {
 /* Position each artifact in the right-side canvas */
 .hero-showcase-item[data-index="0"] {
   /* Exploded airboat — top right */
-  top: 10%;
+  top: 5%;
   right: 5%;
   width: 450px;
 }
