@@ -151,21 +151,21 @@ body {
   /* Exploded airboat — top right */
   top: 10%;
   right: 10%;
-  width: 360px;
+  width: 450px;
 }
 
 .hero-showcase-item[data-index="1"] {
   /* Circuit — center right */
   bottom: 10%;
   right: 5%;
-  width: 300px;
+  width: 450px;
 }
 
 .hero-showcase-item[data-index="2"] {
   /* Spinner drawing — upper center-right */
   bottom: 13%;
   right: 40%;
-  width: 350px;
+  width: 450px;
 }
 
 .hero-placeholder { display: none; }
