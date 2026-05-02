@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Air Boat for Lake Cleanup | Ethan Salazar</title>
+  <title>The SS Guardian — Air Boat for Lake Cleanup | Ethan Salazar</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -27,14 +27,15 @@
     <section class="project-hero">
       <div class="project-hero-inner">
         <div>
-          <div class="project-eyebrow">Two-Semester Course Project · Lake Cleanup</div>
-          <h1 class="project-title">[WIP] Air Boat for Lake Cleanup</h1>
+          <div class="project-eyebrow">Two-Semester Capstone · Lake Guardians</div>
+          <h1 class="project-title">The SS Guardian — Air Boat for Lake Cleanup</h1>
           <p class="project-subtitle">
-            Remotely operated airboat with a front-mounted comb system designed to relocate
-            floating plastics out of brush-filled shorelines on Lady Bird Lake and Lake Austin.
-            Built using full engineering design methodology: stakeholder interviews, function
-            trees, morphological matrices, Pugh charts, FMEA, DFMA, CAD, and physical
-            prototypes.
+            A $200 remote-controlled airboat that reaches shallow, vegetated shorelines
+            on Lady Bird Lake and Lake Austin where standard cleanup boats can't go.
+            Designed and built over two semesters using full engineering design
+            methodology — stakeholder interviews, House of Quality, FMEA, DFMA, CAD,
+            and physical prototyping — to extend the reach of Austin Watershed
+            Protection's manual cleanup crews, not replace them.
           </p>
         </div>
 
@@ -42,32 +43,40 @@
           <div class="project-meta-item">
             <span class="project-meta-label">Role</span>
             <span>
-              Design methodology, systems arch, DFMA analysis, prototyping,
-              documentation
+              Design methodology, systems architecture, DFMA analysis, prototyping,
+              fabrication, documentation
             </span>
           </div>
 
           <div class="project-meta-item project-meta-timeline">
             <span class="project-meta-label">Timeline</span>
-            <span>2 semesters · ME 366J Engineering Design Methodology (ongoing)</span>
+            <span>Fall 2025 → Spring 2026 · ME 366K + ME 266K · Completed</span>
+          </div>
+
+          <div class="project-meta-item">
+            <span class="project-meta-label">Team</span>
+            <span>
+              Derek Morales, Christopher Rodriguez, Ethan Salazar, Alexander Vu, Sarah Wu
+            </span>
           </div>
 
           <div class="project-meta-item">
             <span class="project-meta-label">Key Tools</span>
             <span>
-              Stakeholder interviews, House of Quality, FMEA, DFMA, CAD, low-fidelity prototyping
+              Stakeholder interviews, House of Quality, FMEA, DFMA, SolidWorks,
+              fiberglass + epoxy fabrication, FDM/TPU 3D printing, RC electronics
             </span>
           </div>
         </div>
 
         <div class="project-hero-media project-hero-media-grid">
           <figure class="project-hero-figure">
-            <img src="img/lake-guardians-hero-lake.jpg">
-                 alt="Plastic debris along a vegetated shoreline on Lady Bird Lake" />
+            <img src="img/lake-final-cad.png"
+                 alt="Final CAD orthogonal view of the SS Guardian airboat" />
           </figure>
           <figure class="project-hero-figure">
-            <img src="img/lake-cad.png"
-                 alt="CAD rendering of the airboat cleanup concept" />
+            <img src="img/lake-build-electronics.JPG"
+                 alt="The painted SS Guardian hull with prop shroud and electronics box mounted" />
           </figure>
         </div>
       </div>
@@ -78,13 +87,13 @@
 
         <aside>
           <div class="project-sidebar-card">
-            <h3>System Concept</h3>
+            <h3>Final System Specs</h3>
             <ul>
-              <li>RC airboat with above-water fan and rudders</li>
-              <li>Front comb “bulldozer” to push debris through brush</li>
-              <li>Modular electronics pod with waterproof enclosure</li>
-              <li>Foam hull sized for 2 ft × 1 ft footprint</li>
-              <li>Designed for shallow, vegetation-dense shorelines</li>
+              <li>$200 build cost (target: &lt;$250)</li>
+              <li>3 kg payload, 1" draft, 24" hull</li>
+              <li>1.2 m/s top speed, 20–30 min runtime</li>
+              <li>~24 N thrust vs. 7.5 N drag — ~3× margin</li>
+              <li>Deployable by 2 people in &lt;2 hours</li>
             </ul>
           </div>
 
@@ -92,11 +101,35 @@
             <h3>Project Links</h3>
             <ul>
               <li>
-                <a href="files/CDR Report.pdf"
+                <a href="files/lake-fdr.pdf"
                    target="_blank"
                    rel="noopener noreferrer"
                    download>
-                  Comprehensive Design Review (PDF)
+                  Final Design Report (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="files/lake-trr.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Test Readiness Review (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="files/lake-cdr-fall2025.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Comprehensive Design Review — Fall 2025 (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="files/lake-poster.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   download>
+                  Capstone Poster (PDF)
                 </a>
               </li>
             </ul>
@@ -108,7 +141,7 @@
             <figure class="project-plot-thumb">
               <img src="img/function-tree.png"
                    alt="Function tree for removing plastics from lakes" />
-              <figcaption>Function tree decomposing “Remove plastic from lakes.”</figcaption>
+              <figcaption>Function tree decomposing "Remove plastic from lakes."</figcaption>
             </figure>
 
             <figure class="project-plot-thumb">
@@ -124,8 +157,8 @@
             </figure>
 
             <p class="plot-note">
-              Additional CAD drawings, FMEA tables, DFMA notes, and test photos are available
-              in the linked report.
+              Detailed CAD drawings, FMEA tables, DFMA notes, and full test data are
+              in the linked Final Design Report.
             </p>
           </div>
         </aside>
@@ -135,128 +168,196 @@
           <section class="project-section">
             <h2>Overview</h2>
             <p>
-              Central Texas lakes are collecting plastic litter and tire-wear particles, especially
-              along brush-filled shorelines where existing cleanup boats can’t maneuver safely.
-              Our Lake Guardians team set out to design a small, deployable system that can reach
-              those pockets, corral floating plastics, and hand debris off to existing crews instead
-              of replacing them.
+              Lady Bird Lake and Lake Austin collect plastic litter and tire-wear
+              particles from urban runoff, storm drains, and creeks. The hardest
+              spots to reach — shallow vegetated shorelines under bridges and
+              brush — are exactly where debris piles up, and existing cleanup
+              boats can't maneuver there safely. Recent UT Jackson School research
+              has shown microplastic concentrations in Lady Bird Lake sediments
+              are rising, and most microplastic begins as larger plastic that
+              breaks down over time, so intercepting macroplastic upstream
+              prevents future microplastic.
             </p>
             <p>
-              Over two semesters, we’ve treated this as a full design-methodology case study:
-              interviewing stakeholders from the City of Austin and UT research groups, translating
-              quotes into customer needs, building engineering specifications and a House of
-              Quality, then using structured concept generation and selection to arrive at a
-              remotely operated airboat with a front comb bulldozer mechanism.
+              Our Lake Guardians team set out to design and build a small,
+              deployable system that can reach those pockets, corral floating
+              plastics, and hand debris off to existing volunteer crews instead of
+              replacing them. Over two semesters we treated this as a full
+              design-methodology case study and walked it all the way to a
+              working physical prototype: <strong>The SS Guardian</strong>, a $200
+              remote-controlled airboat with a flexible front rake.
             </p>
           </section>
 
           <section class="project-section">
             <h2>Design Methodology</h2>
             <p>
-              This project is less about a single cool prototype and more about doing the design
-              process correctly end-to-end. We:
+              This project is less about a single cool prototype and more about
+              executing the design process correctly end-to-end. We:
             </p>
             <ul>
               <li>
-                Conducted solution-neutral interviews and field observations, then converted
-                raw quotes into interpreted needs, engineering requirements, and ranked
-                specifications
+                Conducted solution-neutral interviews with Austin Watershed
+                Protection, the City of Austin, and UT research groups, then
+                converted raw quotes into interpreted needs, engineering
+                requirements, and ranked specifications
               </li>
               <li>
-                Built a <strong>House of Quality</strong> that benchmarked Mr. Trash Wheel, StormX
-                Netting Trap, and Seabin, then used that to set target metrics for capture
-                performance, ecological safety, and ease of maintenance
+                Built a <strong>House of Quality</strong> that benchmarked Mr.
+                Trash Wheel, StormX Netting Trap, and Seabin, then used that to
+                set target metrics for capture performance, ecological safety,
+                and ease of maintenance
               </li>
               <li>
-                Used <strong>function decomposition</strong> to break “remove plastics from lakes” into
-                eight primary functions like intercepting floating plastics, protecting wildlife,
-                retaining debris, enabling modular deployment, and informing the public
+                Used <strong>function decomposition</strong> to break "remove
+                plastics from lakes" into eight primary functions like
+                intercepting floating plastics, protecting wildlife, retaining
+                debris, enabling modular deployment, and informing the public
               </li>
               <li>
-                Ran multiple ideation methods (6-3-5 brainwriting, design-by-analogy,
-                SCAMPER) and captured those ideas in a morphological matrix and five fully
-                defined concept variants
+                Ran multiple ideation methods (6-3-5 brainwriting,
+                design-by-analogy, SCAMPER) and captured those ideas in a
+                morphological matrix and five fully defined concept variants
               </li>
               <li>
-                Evaluated concepts with rotating-datum <strong>Pugh charts</strong>, backed by
-                quick “back-of-the-envelope” calculations for throughput, capacity, cost, and
-                maintenability
+                Evaluated concepts with rotating-datum <strong>Pugh charts</strong>,
+                backed by quick back-of-the-envelope calculations for throughput,
+                capacity, cost, and maintainability
               </li>
             </ul>
             <p>
-              The outcome of all that structure was a clear, defensible choice: an airboat
-              concept that balanced plastic removal, wildlife safety, cost, and maintainability
-              better than drones, floating channels, or hand tools.
+              The outcome was a clear, defensible choice: an airboat concept that
+              balanced plastic removal, wildlife safety, cost, and maintainability
+              better than drones, net guns, floating channels, or hand tools.
             </p>
           </section>
 
           <section class="project-section">
-            <h2>Leading Concept: Airboat Cleanup System</h2>
+            <h2>Final Design — The SS Guardian</h2>
             <p>
-              The final concept is a small airboat that pushes trash instead of sucking water:
+              The final system is a small airboat that pushes trash instead of
+              sucking water — the entire drivetrain stays above the waterline so
+              vegetation can't jam it and wildlife can't be hit:
             </p>
             <ul>
               <li>
-                <strong>Above-water propulsion:</strong> a rear fan and rudder system mounted entirely
-                above the waterline to avoid vegetation jams and protect wildlife
+                <strong>Hull:</strong> 24" XPS foam core with a fiberglass + epoxy
+                skin, sized for a 1" draft and 3 kg loaded weight. Stable,
+                portable, and cheap to build with student-shop materials.
               </li>
               <li>
-                <strong>Front comb bulldozer:</strong> a wide rake that funnels floating plastics out of
-                brushy shorelines into access zones where crews can collect them
+                <strong>Above-water propulsion:</strong> a 10×7 nylon prop in a
+                3D-printed shroud, driven by a brushed motor on a tabbed spoiler
+                mount. No submerged drivetrain.
               </li>
               <li>
-                <strong>Modular hull:</strong> stacked XPS foam panels with an epoxy skin, sized for a
-                2 ft × 1 ft footprint so the boat is stable, portable, and cheap to build
+                <strong>Front rake:</strong> a one-piece TPU rake spans the bow
+                and flexes around brush instead of snagging on it — a direct
+                response to PLA prototypes that snapped at the seam.
               </li>
               <li>
-                <strong>Swap-in modules:</strong> a removable comb assembly, electronics pod, and
-                propulsion module so parts can be upgraded or replaced without rebuilding the
-                hull
+                <strong>Steering:</strong> a servo-driven air rudder mounted in
+                the prop wash, responsive down to under 0.5 m/s.
+              </li>
+              <li>
+                <strong>Electronics:</strong> 7.2V battery pack, ESC, 2.4 GHz RC
+                receiver, single steering servo. No tether.
               </li>
             </ul>
 
             <figure class="project-figure project-figure--diagram project-figure--narrow">
-              <img src="img/exploded-airboat.png" alt="Final CAD rendering of the airboat with comb, fan, and hull" />
+              <img src="img/exploded-airboat.png" alt="Exploded CAD view showing comb, hull, propulsion, and electronics modules" />
               <figcaption>
-                Exploded CAD layout showing above-water propulsion, modular electronics pod, and front comb assembly
+                Exploded CAD layout showing above-water propulsion, modular
+                electronics pod, and front rake assembly.
               </figcaption>
             </figure>
           </section>
 
           <section class="project-section">
-            <h2>Prototyping &amp; Risk Reduction</h2>
+            <h2>Build &amp; Fabrication</h2>
             <p>
-              Before spending real money on electronics, we built low-fidelity prototypes for the
-              two riskiest subsystems: the comb and the hull.
+              Spring 2026 was about turning the CDR design into a real boat. The
+              hull was hand-built from a stack of XPS sheets, hot-wire shaped,
+              wrapped in fiberglass, and finished with foam-safe epoxy and
+              waterway-safe paint. The shroud, spoiler, rudder, and servo mount
+              were FDM-printed in PLA; the rake was printed in TPU to give the
+              teeth the flex they needed against vegetation.
+            </p>
+
+            <div class="project-plot-row">
+              <figure class="project-figure project-figure--photo">
+                <img src="img/lake-team-build.jpeg" alt="Team laminating XPS foam panels for the hull" />
+                <figcaption>Stacking and bonding XPS foam panels for the hull core.</figcaption>
+              </figure>
+
+              <figure class="project-figure project-figure--photo">
+                <img src="img/lake-build-fiberglass.JPG" alt="Team applying fiberglass and epoxy to the hull" />
+                <figcaption>Fiberglass + epoxy skin going on the foam core.</figcaption>
+              </figure>
+            </div>
+
+            <div class="project-plot-row">
+              <figure class="project-figure project-figure--photo">
+                <img src="img/lake-hull-painted.JPG" alt="Painted hull drying on sawhorses" />
+                <figcaption>Finished hull after waterway-safe paint.</figcaption>
+              </figure>
+
+              <figure class="project-figure project-figure--photo">
+                <img src="img/lake-build-electronics.JPG" alt="Painted hull with prop shroud and electronics box installed" />
+                <figcaption>Final hull with prop shroud, motor mount, and electronics box mounted.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="project-section">
+            <h2>Test-Driven Iteration</h2>
+            <p>
+              Three subsystems went through visible "fail and re-design" loops
+              between the TRR and FDR. Each iteration was driven by a specific
+              failure mode we observed in benchtop testing:
             </p>
             <ul>
               <li>
-                <strong>Comb prototype:</strong> PVC frame and paint-stick “teeth” tested in brushy,
-                lake-like conditions with bottles and wrappers. This validated the geometry for
-                pushing debris through vegetation and exposed obvious failure modes like tooth
-                breakage and weak attachments
+                <strong>Motor mount.</strong> The first PLA spoiler split along
+                its layer lines and the press-fit prop slipped under load. The
+                fix was a 3-piece tabbed spoiler with a collet-mounted nylon
+                prop, which held torque cleanly.
               </li>
               <li>
-                <strong>Foam hull PoC:</strong> a bathtub-tested insulation-foam hull with a toy fan
-                to confirm buoyancy, stability, and deck geometry before committing to a full
-                epoxy-coated build
+                <strong>Rake.</strong> A two-piece PLA rake snapped at the seam
+                the first time it hit brush. The replacement is a one-piece TPU
+                rake that flexes around obstacles instead of breaking.
               </li>
               <li>
-                <strong>FMEA:</strong> quantified risk around vegetation jams, electronics flooding,
-                and RC signal loss, then drove concrete mitigations like a wiper system on the comb,
-                sealed electronics enclosures, and antenna placement changes
+                <strong>Rudder.</strong> An early water rudder bent the servo arm
+                at speed. We upsized to an air rudder in the prop wash and
+                corrected the print orientation so the rudder loads went into the
+                stronger axis.
               </li>
             </ul>
 
             <div class="project-plot-row">
               <figure class="project-figure project-figure--photo">
-                <img src="img/comb-prototype.jpg" alt="Comb prototype used to test geometry and jamming risk" />
-                <figcaption>Comb prototype used to test geometry and jamming risk</figcaption>
+                <img src="img/lake-poc-fall2025.JPG" alt="Fall 2025 proof-of-concept with motor mount, rake, electronics on a foam hull" />
+                <figcaption>Fall 2025 proof-of-concept — early motor mount, rake, and electronics on a bare XPS hull.</figcaption>
               </figure>
 
               <figure class="project-figure project-figure--photo">
-                <img src="img/hull-prototype.jpg" alt="Foam hull proof-of-concept verifying buoyancy and stability" />
-                <figcaption>Foam hull proof-of-concept verifying buoyancy and stability</figcaption>
+                <img src="img/lake-rake-tpu.JPG" alt="Final one-piece TPU rake" />
+                <figcaption>Final one-piece TPU rake — flexes through brush without snagging.</figcaption>
+              </figure>
+            </div>
+
+            <div class="project-plot-row">
+              <figure class="project-figure project-figure--photo">
+                <img src="img/lake-prop-shroud.JPG" alt="3D-printed propeller shroud" />
+                <figcaption>3D-printed propeller shroud, sized for a 10×7 nylon prop.</figcaption>
+              </figure>
+
+              <figure class="project-figure project-figure--photo">
+                <img src="img/lake-prop-mount.JPG" alt="Collet-mounted prop in tabbed spoiler motor mount" />
+                <figcaption>Collet-mounted prop in the redesigned tabbed spoiler.</figcaption>
               </figure>
             </div>
           </section>
@@ -264,80 +365,115 @@
           <section class="project-section">
             <h2>Design for Manufacturing &amp; Assembly</h2>
             <p>
-              A big chunk of this project was learning to design for the shop we actually have,
-              not the shop we wish we had. I leaned heavily on DFMA heuristics while revising
-              the CAD:
+              A big chunk of this project was learning to design for the shop we
+              actually have, not the shop we wish we had. DFMA heuristics drove
+              a lot of the late-semester CAD revisions:
             </p>
             <ul>
               <li>
-                <strong>Manufacturing:</strong> re-designed the hull around flat XPS sheets and simple
-                2D cuts; converted the comb from many unique tines into a small set of repeated
-                laser-cut panels; and selected common materials (foam, plywood, PVC,
-                aluminum) that can be manufactured in student shops
+                <strong>Manufacturing:</strong> re-built the hull around flat XPS
+                sheets and simple 2D cuts; converted the rake from many unique
+                tines into a single TPU print; selected common materials (foam,
+                plywood, PVC, aluminum) that can be sourced and machined in
+                student shops.
               </li>
               <li>
-                <strong>Assembly:</strong> reduced part count, consolidated bolt sizes, and added
-                self-locating features and press-fit interfaces so the boat can be assembled
-                top-down with simple hand tools
+                <strong>Assembly:</strong> reduced part count, consolidated bolt
+                sizes, and added self-locating features and press-fit interfaces
+                so the boat can be assembled top-down with simple hand tools.
               </li>
               <li>
-                <strong>Documentation:</strong> created detailed assembly drawings, an assembly plan,
-                and a BOM that someone else could realistically follow without our whole
-                report as a crutch
+                <strong>Documentation:</strong> created assembly drawings, an
+                assembly plan, and a BOM that someone else could realistically
+                follow without the whole design report as a crutch.
               </li>
             </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Results</h2>
+            <p>
+              The final boat hits the targets we set in the House of Quality at
+              the start of Fall 2025:
+            </p>
+            <ul>
+              <li><strong>Cost:</strong> ~$200 build (target &lt;$250)</li>
+              <li><strong>Top speed:</strong> 1.2 m/s on flat water</li>
+              <li><strong>Draft / payload:</strong> 1" draft at 3 kg loaded</li>
+              <li><strong>Runtime:</strong> 20–30 min on a 7.2V pack</li>
+              <li><strong>Thrust margin:</strong> ~24 N thrust vs. ~7.5 N hull drag at 1 m/s — about a 3× thrust-to-drag margin, which is what gave us the head-room to add the rake without losing controllability</li>
+              <li><strong>Deployability:</strong> two people, under two hours, no tether</li>
+            </ul>
+            <p>
+              <em>Honest limits:</em> the SS Guardian has a small payload and
+              still needs an operator. It's a complement to industrial
+              interceptors like Mr. Trash Wheel and autonomous skimmers like
+              WasteShark — not a substitute. It earns its place by going the
+              one place those bigger systems can't: into the brush.
+            </p>
           </section>
 
           <section class="project-section">
             <h2>Responsibilities &amp; What I Learned</h2>
             <p>
-              This project forced me to live inside a structured
-              design process for months and keep the team moving. Key things I owned and
-              learned:
+              I owned the design-methodology workstreams across both semesters
+              and led the DFMA pass on the hull and rake. Specific things I
+              learned to do well on this project:
             </p>
             <ul>
               <li>
-                <strong>Design process discipline:</strong> keeping our work traceable from customer
-                quotes → interpreted needs → engineering specs → design artifacts (function
-                tree, HoQ, morph matrix, Pugh charts) → final concept
+                <strong>Design process discipline:</strong> keeping the work
+                traceable from customer quotes → interpreted needs → engineering
+                specs → design artifacts (function tree, HoQ, morph matrix,
+                Pugh charts) → a defensible final concept.
               </li>
               <li>
-                <strong>Risk-aware design:</strong> using FMEA as a real design tool instead of a
-                checkbox, then folding those risks back into geometry changes, enclosure
-                decisions, and control-system failsafes
+                <strong>Risk-aware design:</strong> using FMEA as a real design
+                tool rather than a checkbox, then folding those risks back into
+                geometry changes, enclosure decisions, and control-system
+                failsafes.
               </li>
               <li>
-                <strong>DFMA mindset:</strong> learning to simplify geometry, standardize parts, and
-                design fasteners and interfaces so that volunteers—not just engineers—can
-                assemble and maintain the system
+                <strong>DFMA mindset:</strong> simplifying geometry, standardizing
+                parts, and choosing fasteners and interfaces so that
+                volunteers — not just engineers — can assemble and maintain the
+                system.
               </li>
               <li>
-                <strong>Project planning:</strong> maintaining the Gantt chart and task list, breaking
-                ambiguous deliverables into concrete tasks, and making sure our design work
-                aligned with the course milestones and the two-semester roadmap
+                <strong>Project planning:</strong> maintaining the Gantt chart
+                and task list, breaking ambiguous deliverables into concrete
+                tasks, and keeping our work aligned with the course milestones
+                and the two-semester roadmap.
               </li>
               <li>
-                <strong>Communicating decisions:</strong> packaging all of this into clear reports and
-                presentations so faculty, stakeholders, and future teams can understand why we
-                chose an airboat, how it meets specs, and where to iterate next
+                <strong>Communicating decisions:</strong> packaging all of this
+                into clear reports, presentations, and a poster so faculty,
+                stakeholders, and future teams can understand <em>why</em> we
+                chose an airboat, how it meets specs, and where to iterate next.
               </li>
             </ul>
           </section>
 
           <section class="project-section">
-            <h2>Impact &amp; Next Steps</h2>
+            <h2>What's Next</h2>
             <p>
-              By the end of the CDR, we have more than just a sketch: we have a justified, manufacturable
-              airboat concept with drawings, risk mitigations, and a build plan. Next semester
-              we’ll fabricate a medium-fidelity prototype, validate thrust and steering on the water,
-              stress-test the comb in real vegetation, and close the loop with the researchers and
-              city partners who helped shape the specs.
+              The SS Guardian leaves a clear roadmap for future cohorts. The
+              highest-value upgrades are:
             </p>
+            <ul>
+              <li>Brushless drivetrain to extend runtime and improve efficiency</li>
+              <li>Fine-mesh shroud to capture trash under low-hanging brush</li>
+              <li>Twin rudders on a second servo for tighter turning</li>
+              <li>Longer hull for greater payload capacity</li>
+              <li>Stiffer rake variant for heavier debris loads</li>
+              <li>Higher-capacity battery for longer cleanup runs</li>
+            </ul>
             <p>
-              This project is the bridge between classroom design tools and the messy,
-              constrained reality of environmental hardware: taking a vague goal like “clean the
-              lake,” grinding it through formal design methodology, and ending up with something
-              real that crews can deploy.
+              More than a single prototype, this project leaves behind a
+              repeatable methodology: a cheap, manufacturable, environmentally
+              honest piece of hardware built end-to-end from stakeholder
+              interviews to a tested boat — and a clear evidence trail of every
+              decision in between.
             </p>
           </section>
 
