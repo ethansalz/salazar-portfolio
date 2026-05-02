@@ -61,7 +61,7 @@
     <div class="hero-showcase">
       <div class="hero-showcase-grid">
         <div class="hero-showcase-item active" data-index="0">
-          <img src="img/exploded-airboat.png" alt="Exploded view of air boat assembly" />
+          <img src="img/lake-hero.JPG" alt="The SS Guardian airboat" />
         </div>
         <div class="hero-showcase-item" data-index="1">
           <img src="img/wiring2.png" alt="Circuit schematic" />
@@ -85,6 +85,28 @@
         <!-- Featured projects -->
         <div class="card-grid">
           <!-- Project Card 1 -->
+          <a href="lake-cleanup.html" class="card">
+            <h3>The SS Guardian: Air Boat for Lake Cleanup</h3>
+
+            <div class="card-media">
+              <img src="img/lake-hero.JPG" alt="The SS Guardian airboat for lake cleanup">
+            </div>
+
+            <p>
+              Two-semester capstone that took an airboat for shoreline plastic
+              cleanup from stakeholder interviews to a $200 working prototype.
+              Full design methodology including HoQ, FMEA, DFMA, CAD, fiberglass
+              fabrication, and three test-driven subsystem redesigns.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Systems Design</span>
+              <span class="tag">DFM/DFA</span>
+              <span class="tag">Prototyping</span>
+            </div>
+            <div class="card-cta">View project →</div>
+          </a>
+
+          <!-- Project Card 2 -->
           <a href="telemetry.html" class="card">
             <h3>Vehicle Telemetry System</h3>
 
@@ -101,28 +123,6 @@
               <span class="tag">Arduino</span>
               <span class="tag">IMU &amp; GNSS</span>
               <span class="tag">Python</span>
-            </div>
-            <div class="card-cta">View project →</div>
-          </a>
-
-          <!-- Project Card 2 -->
-          <a href="lake-cleanup.html" class="card">
-            <h3>The SS Guardian — Air Boat for Lake Cleanup</h3>
-
-            <div class="card-media">
-              <img src="img/lake-main.png" alt="The SS Guardian airboat for lake cleanup">
-            </div>
-
-            <p>
-              Two-semester capstone that took an airboat for shoreline plastic
-              cleanup from stakeholder interviews to a $200 working prototype.
-              Full design methodology — HoQ, FMEA, DFMA, CAD, fiberglass
-              fabrication, and three test-driven subsystem redesigns.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Systems Design</span>
-              <span class="tag">DFM/DFA</span>
-              <span class="tag">Prototyping</span>
             </div>
             <div class="card-cta">View project →</div>
           </a>
@@ -518,7 +518,7 @@
       }, { passive: true });
     }
 
-    // Hero showcase rotation — cycle highlight every 3s
+    // Hero showcase rotation: cycle highlight every 3s
     (function() {
       const items = document.querySelectorAll('.hero-showcase-item');
       if (!items.length) return;
