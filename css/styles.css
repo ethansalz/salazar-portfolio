@@ -448,7 +448,7 @@ body {
 }
 .project-subtitle {
   font-family: var(--sans); font-size: 15px; line-height: 1.65;
-  color: var(--text-mid); max-width: 660px;
+  color: var(--text-mid); max-width: none;
 }
 .project-meta {
   display: flex; flex-wrap: wrap; gap: 12px 40px;
