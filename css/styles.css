@@ -273,8 +273,24 @@ body {
   border-radius: 6px; border: 1px solid var(--border);
   padding: 20px; text-decoration: none; color: inherit;
   transition: background-color 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 .card:hover { background-color: var(--surface-hover); border-color: var(--border-hover); }
+
+/* Accent line draws across the bottom on hover */
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.35s ease;
+  pointer-events: none;
+}
+.card:hover::after { width: 100%; }
 .card h3 {
   font-family: var(--sans); font-size: 15px; font-weight: 700;
   color: var(--text); margin-bottom: 6px; line-height: 1.3;
@@ -286,9 +302,10 @@ body {
 .card-cta {
   font-family: var(--mono); font-size: 11px; font-weight: 600;
   color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em;
-  margin-top: 12px; opacity: 0.5; transition: opacity 0.15s;
+  margin-top: 12px; opacity: 0.5;
+  transition: opacity 0.15s, transform 0.2s, color 0.2s;
 }
-.card:hover .card-cta { opacity: 1; }
+.card:hover .card-cta { opacity: 1; color: var(--accent); transform: translateX(4px); }
 
 .nda-note {
   margin-top: 16px; margin-bottom: 0; text-align: center;
@@ -301,7 +318,11 @@ body {
   background-color: #0f0f0f; border: 1px solid var(--border);
   min-height: 150px; display: flex; align-items: center; justify-content: center;
 }
-.card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.card-media img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover .card-media img { transform: scale(1.03); }
 .section-note { margin: 0.4rem 0 1rem; color: var(--text-dim); font-size: 13px; }
 
 /* Tags */
