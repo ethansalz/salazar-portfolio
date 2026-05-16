@@ -250,7 +250,7 @@ body {
 }
 .section-intro {
   font-family: var(--sans); font-size: 14px; color: var(--text-dim);
-  max-width: 720px; margin-bottom: 32px; line-height: 1.5;
+  max-width: none; margin-bottom: 32px; line-height: 1.5;
 }
 .section-subtitle {
   font-family: var(--mono); font-size: 10px; font-weight: 700;
