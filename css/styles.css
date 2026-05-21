@@ -18,7 +18,7 @@ body, html { height: 100%; }
 
   /* ---- Light theme (default) ---- */
   --accent-dim: rgba(191,87,0,0.10);
-  --bg: #f5f3ef;
+  --bg: #f6f4f1;
   --surface: #ffffff;
   --surface-hover: #f1ede7;
   --border: #e4ded5;
