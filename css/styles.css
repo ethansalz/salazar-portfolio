@@ -129,7 +129,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  min-height: 92vh; display: flex; align-items: center;
+  min-height: 88vh; display: flex; align-items: center;
   padding: 20px 0 10px; position: relative; overflow: hidden;
 }
 .hero::before {
