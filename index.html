@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethan Salazar | Engineering Portfolio</title>
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -22,6 +23,10 @@
           <a href="#skills">Skills</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
         </nav>
       </div>
     </header>
@@ -33,11 +38,13 @@
           <div style="font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;animation:fadeUp 0.5s ease 0.1s both;">
             Mechanical Engineering &amp; Program Management
           </div>
-          <h1>Welcome to my portfolio</h1>
+          <h1>Welcome to my portfolio.</h1>
           <p>
-            I recently graduated from UT Austin with a B.S. in Mechanical Engineering and will be joining SpaceX in May 2026. 
-            This site is a collection of academic and personal projects I worked on during undergrad, from battery test hardware 
-            and lake cleanup devices to vehicle telemetry platforms and automated tools. Check out some of my work below.
+            I'm Ethan, a mechanical engineer and recent UT Austin grad, joining SpaceX in 2026.
+            I like building hardware and the processes that get it to production. Across five
+            internships, including battery manufacturing and HV pack design at Tesla, I've supported
+            production lines across multiple countries, delivered dozens of pack test articles, and
+            built vehicle telemetry, test hardware, and automation tools from scratch. Take a look around.
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn primary">View Projects</a>
@@ -46,31 +53,20 @@
 
           <div class="hero-stats">
             <div class="hero-stat">
-              <span class="hero-stat-val">5</span>
-              <span class="hero-stat-label">Internships</span>
+              <span class="hero-stat-val">10</span>
+              <span class="hero-stat-label">Production Lines</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-val">75+</span>
+              <span class="hero-stat-label">Test Articles</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-val">8+</span>
-              <span class="hero-stat-label">Projects</span>
+              <span class="hero-stat-label">Teams Coordinated</span>
             </div>
           </div>
         </section>
-
-       </div>
-    <!-- Showcase is outside hero-inner, direct child of .hero so it spans full height -->
-    <div class="hero-showcase">
-      <div class="hero-showcase-grid">
-        <div class="hero-showcase-item active" data-index="0">
-          <img src="img/exploded-airboat.png" alt="Exploded view of air boat assembly" />
-        </div>
-        <div class="hero-showcase-item" data-index="1">
-          <img src="img/wiring2.png" alt="Circuit schematic" />
-        </div>
-        <div class="hero-showcase-item" data-index="2">
-          <img src="img/spinner-drawing.png" alt="Engineering drawing" />
-        </div>
       </div>
-    </div>
     </main>
 
     <!--========== PROJECTS ==========-->
@@ -180,19 +176,6 @@
             <div class="card-cta">View project →</div>
           </a>
 
-          <a href="fidget-spinner.html" class="card">
-            <h3>Fidget Spinner CAD &amp; Manufacturing</h3>
-            <p>
-              Parametric CAD design and analysis of a fidget spinner, including
-              drawing creation, tolerance considerations, and manufacturability.
-            </p>
-            <div class="tag-list">
-              <span class="tag">CAD</span>
-              <span class="tag">Drawings</span>
-            </div>
-            <div class="card-cta">View project →</div>
-          </a>
-
           <a href="mfg-documentation.html" class="card">
             <h3>Corporate Manufacturing Documentation</h3>
             <p>
@@ -207,19 +190,6 @@
             <div class="card-cta">View project →</div>
           </a>
 
-          <a href="treasure-chest.html" class="card">
-            <h3>Treasure Chest LED Cooler</h3>
-            <p>
-              Turned a $6 Goodwill treasure chest into a functioning light-up cooler
-              with motion-activated LEDs and decorative loot, built almost entirely
-              from garage materials for under $30.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Build</span>
-              <span class="tag">Resourceful Design</span>
-            </div>
-            <div class="card-cta">View project →</div>
-          </a>
         </div>
       </div>
     </section>
@@ -284,18 +254,6 @@
             <ul>
               <li>Conducted reliability and performance research on all-solid-state battery materials through structured testing and analysis</li>
               <li>Supported data collection, test fixture development, and lab documentation for ongoing publications and graduate projects</li>
-            </ul>
-          </article>
-
-          <!-- Personal / Breadth Jobs -->
-          <article class="experience-item">
-            <h3>Other Roles</h3>
-            <p class="experience-meta"><span class="experience-company">Various</span><span class="experience-location">Various locations</span><span class="experience-dates">High school &amp; early college</span></p>
-            <ul>
-              <li>Shift manager at Chick-fil-A</li>
-              <li>Cleanup crew at In-N-Out</li>
-              <li>Lifeguard at my neighborhood pool</li>
-              <li>Marching band instructor for high school students</li>
             </ul>
           </article>
 
@@ -521,18 +479,6 @@
         accentLine.style.height = (pct * 100) + '%';
       }, { passive: true });
     }
-
-    // Hero showcase rotation: cycle highlight every 3s
-    (function() {
-      const items = document.querySelectorAll('.hero-showcase-item');
-      if (!items.length) return;
-      let current = 0;
-      setInterval(function() {
-        items[current].classList.remove('active');
-        current = (current + 1) % items.length;
-        items[current].classList.add('active');
-      }, 3000);
-    })();
 
     // Active-section nav indicator: highlights the link for the section in view
     (function() {
