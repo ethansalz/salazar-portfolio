@@ -323,6 +323,10 @@ body {
   color: var(--text-dim); text-transform: uppercase;
   letter-spacing: 0.1em; margin-top: 40px;
 }
+.projects-note {
+  font-family: var(--sans); font-size: 14px; color: var(--text-dim);
+  line-height: 1.6; margin-top: 28px;
+}
 
 /* Section number labels (// 01, // 02, etc) */
 .section-label {
